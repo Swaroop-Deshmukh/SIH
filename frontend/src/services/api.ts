@@ -19,7 +19,8 @@ export const minesApi = {
 export const explorationApi = {
   getProspectivity: () => api.get('/exploration/prospectivity'),
   getOccurrences: () => api.get('/exploration/occurrences'),
-  getDataSources: () => api.get<DataSource[]>('/exploration/data-sources'),
+  getDataSources: () => api.get<any>('/exploration/data-sources'),
+  predictProspectivity: (data: any) => api.post('/exploration/predict', data),
 };
 
 export const targetsApi = {
@@ -33,6 +34,7 @@ export const productionApi = {
   getForecast: () => api.get('/production/forecast'),
   getShortfall: () => api.get<ShortfallPrediction[]>('/production/shortfall'),
   getBottlenecks: () => api.get('/production/bottlenecks'),
+  predictShortfall: (data: any) => api.post('/production/predict-shortfall', data),
 };
 
 export const equipmentApi = {

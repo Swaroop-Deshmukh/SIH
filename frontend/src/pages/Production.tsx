@@ -33,7 +33,7 @@ export const Production: React.FC = () => {
       <div className="bg-white rounded border border-slate-200 p-6 shadow-sm space-y-4">
         <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3 flex items-center justify-between">
           <span>7-Day Ore Output Forecast (Daily Tonnes)</span>
-          <span className="text-xs font-normal text-slate-500">XGBoost Regressor Model</span>
+          <span className="text-xs font-normal text-slate-500">LogisticRegression / HGB Time-Series Model</span>
         </h3>
 
         <div className="h-64 w-full">

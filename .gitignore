@@ -247,7 +247,13 @@ optuna.log
 
 # ------------------------------------------------------------
 # Data Directories (selective — keep synthetic & boundaries)
-# ------------------------------------------------------------
+# Data Directories (selective — keep synthetic & boundaries)
+raw/
+synthetic/
+synthethic/
+models/
+processed/
+
 data/raw/*
 !data/raw/.gitkeep
 !data/raw/boundaries/

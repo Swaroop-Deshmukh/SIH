@@ -43,7 +43,7 @@ export const TargetAnalysis: React.FC = () => {
         <div className="lg:col-span-2 bg-white rounded border border-slate-200 p-6 shadow-sm space-y-4">
           <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3 flex items-center justify-between">
             <span>Model-Attributed Feature Contributions</span>
-            <span className="text-xs font-normal text-slate-500">Tree SHAP Values</span>
+            <span className="text-xs font-normal text-slate-500">Tree SHAP Values (Random Forest Model)</span>
           </h3>
 
           <div className="space-y-3">

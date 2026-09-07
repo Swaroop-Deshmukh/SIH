@@ -1,0 +1,2914 @@
+{
+  "raw_inventory": [
+    {
+      "relative_path": "raw/accessibility/Balaghat_Accessibility_Roads_geojson_uid_f32a03b1-e89f-4f21-8355-f32ba511eb2b.zip",
+      "filename": "Balaghat_Accessibility_Roads_geojson_uid_f32a03b1-e89f-4f21-8355-f32ba511eb2b.zip",
+      "extension": ".zip",
+      "size_bytes": 370429,
+      "size_human": "361.75 KB",
+      "file_type": "zip",
+      "contained_files_count": 3,
+      "contained_files": [
+        "Balaghat_Accessibility_Roads.geojson",
+        "Readme.txt",
+        "clipping_boundary.geojson"
+      ]
+    },
+    {
+      "relative_path": "raw/accessibility/Balaghat_Accessibility_Roads_geojson_uid_f32a03b1-e89f-4f21-8355-f32ba511eb2b/Balaghat_Accessibility_Roads.geojson",
+      "filename": "Balaghat_Accessibility_Roads.geojson",
+      "extension": ".geojson",
+      "size_bytes": 1664922,
+      "size_human": "1.59 MB",
+      "file_type": "vector",
+      "feature_count": 2057,
+      "crs": "EPSG:4326",
+      "bounds": {
+        "minx": 79.8649812,
+        "miny": 21.4115756,
+        "maxx": 80.657259,
+        "maxy": 22.0352894
+      },
+      "geometry_types": [
+        "LineString"
+      ],
+      "columns": [
+        "osm_id",
+        "osm_type",
+        "surface",
+        "tunnel",
+        "width",
+        "oneway",
+        "smoothness",
+        "name",
+        "layer",
+        "bridge",
+        "highway"
+      ],
+      "missing_values": {
+        "osm_id": 0,
+        "osm_type": 0,
+        "surface": 1988,
+        "tunnel": 2032,
+        "width": 2056,
+        "oneway": 2004,
+        "smoothness": 2057,
+        "name": 2026,
+        "layer": 1867,
+        "bridge": 1878,
+        "highway": 0
+      },
+      "head": [
+        {
+          "osm_id": "1124336090",
+          "osm_type": "ways_line",
+          "surface": "None",
+          "tunnel": "None",
+          "width": "None",
+          "oneway": "None",
+          "smoothness": "None",
+          "name": "None",
+          "layer": "None",
+          "bridge": "None",
+          "highway": "tertiary"
+        },
+        {
+          "osm_id": "1518974876",
+          "osm_type": "ways_line",
+          "surface": "None",
+          "tunnel": "None",
+          "width": "None",
+          "oneway": "None",
+          "smoothness": "None",
+          "name": "None",
+          "layer": "None",
+          "bridge": "None",
+          "highway": "tertiary"
+        },
+        {
+          "osm_id": "306386940",
+          "osm_type": "ways_line",
+          "surface": "None",
+          "tunnel": "None",
+          "width": "None",
+          "oneway": "None",
+          "smoothness": "None",
+          "name": "None",
+          "layer": "None",
+          "bridge": "None",
+          "highway": "secondary"
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/accessibility/Balaghat_Accessibility_Roads_geojson_uid_f32a03b1-e89f-4f21-8355-f32ba511eb2b/clipping_boundary.geojson",
+      "filename": "clipping_boundary.geojson",
+      "extension": ".geojson",
+      "size_bytes": 252,
+      "size_human": "0.25 KB",
+      "file_type": "vector",
+      "feature_count": 1,
+      "crs": "EPSG:4326",
+      "bounds": {
+        "minx": 79.93686882216016,
+        "miny": 21.515120450815985,
+        "maxx": 80.5861608814029,
+        "maxy": 21.96719313446188
+      },
+      "geometry_types": [
+        "Polygon"
+      ],
+      "columns": [],
+      "missing_values": {},
+      "head": []
+    },
+    {
+      "relative_path": "raw/accessibility/Balaghat_Accessibility_Roads_geojson_uid_f32a03b1-e89f-4f21-8355-f32ba511eb2b/Readme.txt",
+      "filename": "Readme.txt",
+      "extension": ".txt",
+      "size_bytes": 501,
+      "size_human": "0.49 KB",
+      "file_type": "text",
+      "sample_lines": [
+        "Exported Timestamp (UTC+0000): 2026-09-07 10:50:13",
+        "Exported through Raw-data-api (https://github.com/hotosm/raw-data-api) using OpenStreetMap data.",
+        "Exports are made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/.",
+        "Learn more about OpenStreetMap and its data usage policy : https://www.openstreetmap.org/about"
+      ]
+    },
+    {
+      "relative_path": "raw/dem/output_SRTMGL1.tif",
+      "filename": "output_SRTMGL1.tif",
+      "extension": ".tif",
+      "size_bytes": 15060,
+      "size_human": "14.71 KB",
+      "file_type": "raster",
+      "driver": "GTiff",
+      "width": 144,
+      "height": 180,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "resolution": [
+        0.0002777777777778146,
+        0.0002777777777778146
+      ],
+      "bounds": {
+        "minx": 80.05986111114555,
+        "miny": 21.800138888883826,
+        "maxx": 80.09986111114556,
+        "maxy": 21.850138888883833
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "int16",
+          "nodata": -32768.0
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/geochemistry/original_geochemistry_file.xlsx",
+      "filename": "original_geochemistry_file.xlsx",
+      "extension": ".xlsx",
+      "size_bytes": 52110,
+      "size_human": "50.89 KB",
+      "file_type": "excel",
+      "sheet_count": 1,
+      "sheets": {
+        "Annexure -I to III": {
+          "row_count": 160,
+          "col_count": 73,
+          "columns": [
+            "Serial Number",
+            "Sample Number",
+            "Sample Media",
+            "Sample Type ",
+            "Toposheet Number",
+            "Latitude (DD)",
+            "Longitude (DD)",
+            "Elevation (meter)",
+            "Sample Description / Lithology",
+            "Mineralization (if any)",
+            "Sample Depth (m)",
+            "SiO2 (%)",
+            "Al2O3(%)",
+            "Fe2O3T(%)",
+            "CaO (%)",
+            "MgO (%)",
+            "Na2O (%)",
+            "K2O (%)",
+            "TiO2 (%)",
+            "MnO (%)",
+            "P2O5 (%)",
+            "LOI (%)",
+            "Cu(mg/kg) ",
+            "Pb(mg/kg)",
+            "Zn (mg/kg)",
+            "Co(mg/kg)",
+            "Ni (mg/kg)",
+            "Cr(mg/kg)",
+            "Ba(mg/kg)",
+            "Ga(mg/kg)",
+            "Nb(mg/kg)",
+            "Sc(mg/kg)",
+            "Sr(mg/kg)",
+            "V(mg/kg)",
+            "Y(mg/kg)",
+            "Zr",
+            "Ba",
+            "Co",
+            "Cr",
+            "Cu",
+            "Ga",
+            "Nb",
+            "Ni",
+            "Pb(mg/kg).1",
+            "Sc(mg/kg).1",
+            "Sr(mg/kg).1",
+            "V(mg/kg).1",
+            "Y(mg/kg).1",
+            "Zn(mg/kg)",
+            "Zr(mg/kg)",
+            "Be(mg/kg)",
+            "Ge(mg/kg)",
+            "As(mg/kg)",
+            "Rb(mg/kg)",
+            "Sn(mg/kg)",
+            "La(mg/kg)",
+            "Ce(mg/kg)",
+            "Pr(mg/kg)",
+            "Nd(mg/kg)",
+            "Eu(mg/kg)",
+            "Sm(mg/kg)",
+            "Gd(mg/kg)",
+            "Tb(mg/kg)",
+            "Dy(mg/kg)",
+            "Ho(mg/kg)",
+            "Er(mg/kg)",
+            "Tm(mg/kg)",
+            "Yb(mg/kg)",
+            "Lu(mg/kg)",
+            "Hf(mg/kg)",
+            "Ta(mg/kg)",
+            "Th(mg/kg)",
+            "U(mg/kg)"
+          ],
+          "missing_values": {
+            "Serial Number": 0,
+            "Sample Number": 0,
+            "Sample Media": 0,
+            "Sample Type ": 0,
+            "Toposheet Number": 0,
+            "Latitude (DD)": 0,
+            "Longitude (DD)": 0,
+            "Elevation (meter)": 0,
+            "Sample Description / Lithology": 0,
+            "Mineralization (if any)": 160,
+            "Sample Depth (m)": 160,
+            "SiO2 (%)": 0,
+            "Al2O3(%)": 0,
+            "Fe2O3T(%)": 0,
+            "CaO (%)": 0,
+            "MgO (%)": 0,
+            "Na2O (%)": 0,
+            "K2O (%)": 0,
+            "TiO2 (%)": 0,
+            "MnO (%)": 0,
+            "P2O5 (%)": 0,
+            "LOI (%)": 0,
+            "Cu(mg/kg) ": 10,
+            "Pb(mg/kg)": 10,
+            "Zn (mg/kg)": 10,
+            "Co(mg/kg)": 10,
+            "Ni (mg/kg)": 10,
+            "Cr(mg/kg)": 10,
+            "Ba(mg/kg)": 110,
+            "Ga(mg/kg)": 110,
+            "Nb(mg/kg)": 110,
+            "Sc(mg/kg)": 110,
+            "Sr(mg/kg)": 110,
+            "V(mg/kg)": 110,
+            "Y(mg/kg)": 110,
+            "Zr": 110,
+            "Ba": 150,
+            "Co": 150,
+            "Cr": 150,
+            "Cu": 150,
+            "Ga": 150,
+            "Nb": 150,
+            "Ni": 150,
+            "Pb(mg/kg).1": 150,
+            "Sc(mg/kg).1": 150,
+            "Sr(mg/kg).1": 150,
+            "V(mg/kg).1": 150,
+            "Y(mg/kg).1": 150,
+            "Zn(mg/kg)": 150,
+            "Zr(mg/kg)": 150,
+            "Be(mg/kg)": 150,
+            "Ge(mg/kg)": 150,
+            "As(mg/kg)": 150,
+            "Rb(mg/kg)": 150,
+            "Sn(mg/kg)": 150,
+            "La(mg/kg)": 150,
+            "Ce(mg/kg)": 150,
+            "Pr(mg/kg)": 150,
+            "Nd(mg/kg)": 150,
+            "Eu(mg/kg)": 150,
+            "Sm(mg/kg)": 150,
+            "Gd(mg/kg)": 150,
+            "Tb(mg/kg)": 150,
+            "Dy(mg/kg)": 150,
+            "Ho(mg/kg)": 150,
+            "Er(mg/kg)": 150,
+            "Tm(mg/kg)": 150,
+            "Yb(mg/kg)": 150,
+            "Lu(mg/kg)": 150,
+            "Hf(mg/kg)": 150,
+            "Ta(mg/kg)": 150,
+            "Th(mg/kg)": 150,
+            "U(mg/kg)": 150
+          },
+          "dtypes": {
+            "Serial Number": "int64",
+            "Sample Number": "object",
+            "Sample Media": "object",
+            "Sample Type ": "object",
+            "Toposheet Number": "object",
+            "Latitude (DD)": "float64",
+            "Longitude (DD)": "float64",
+            "Elevation (meter)": "int64",
+            "Sample Description / Lithology": "object",
+            "Mineralization (if any)": "float64",
+            "Sample Depth (m)": "float64",
+            "SiO2 (%)": "float64",
+            "Al2O3(%)": "float64",
+            "Fe2O3T(%)": "float64",
+            "CaO (%)": "float64",
+            "MgO (%)": "float64",
+            "Na2O (%)": "float64",
+            "K2O (%)": "float64",
+            "TiO2 (%)": "float64",
+            "MnO (%)": "float64",
+            "P2O5 (%)": "float64",
+            "LOI (%)": "float64",
+            "Cu(mg/kg) ": "float64",
+            "Pb(mg/kg)": "float64",
+            "Zn (mg/kg)": "float64",
+            "Co(mg/kg)": "float64",
+            "Ni (mg/kg)": "float64",
+            "Cr(mg/kg)": "float64",
+            "Ba(mg/kg)": "float64",
+            "Ga(mg/kg)": "float64",
+            "Nb(mg/kg)": "float64",
+            "Sc(mg/kg)": "float64",
+            "Sr(mg/kg)": "float64",
+            "V(mg/kg)": "float64",
+            "Y(mg/kg)": "float64",
+            "Zr": "float64",
+            "Ba": "object",
+            "Co": "object",
+            "Cr": "object",
+            "Cu": "object",
+            "Ga": "object",
+            "Nb": "object",
+            "Ni": "object",
+            "Pb(mg/kg).1": "object",
+            "Sc(mg/kg).1": "object",
+            "Sr(mg/kg).1": "object",
+            "V(mg/kg).1": "object",
+            "Y(mg/kg).1": "object",
+            "Zn(mg/kg)": "object",
+            "Zr(mg/kg)": "object",
+            "Be(mg/kg)": "object",
+            "Ge(mg/kg)": "float64",
+            "As(mg/kg)": "object",
+            "Rb(mg/kg)": "float64",
+            "Sn(mg/kg)": "object",
+            "La(mg/kg)": "float64",
+            "Ce(mg/kg)": "float64",
+            "Pr(mg/kg)": "float64",
+            "Nd(mg/kg)": "float64",
+            "Eu(mg/kg)": "float64",
+            "Sm(mg/kg)": "float64",
+            "Gd(mg/kg)": "float64",
+            "Tb(mg/kg)": "float64",
+            "Dy(mg/kg)": "float64",
+            "Ho(mg/kg)": "float64",
+            "Er(mg/kg)": "float64",
+            "Tm(mg/kg)": "float64",
+            "Yb(mg/kg)": "float64",
+            "Lu(mg/kg)": "float64",
+            "Hf(mg/kg)": "float64",
+            "Ta(mg/kg)": "float64",
+            "Th(mg/kg)": "float64",
+            "U(mg/kg)": "object"
+          },
+          "head": [
+            {
+              "Serial Number": "1",
+              "Sample Number": "49367/BRS_001",
+              "Sample Media": "Rock",
+              "Sample Type ": "BRS",
+              "Toposheet Number": "55O10",
+              "Latitude (DD)": "21.702",
+              "Longitude (DD)": "79.679",
+              "Elevation (meter)": "356",
+              "Sample Description / Lithology": "Mineralization associated with quartzofeldspathic rock near Chandadoh",
+              "Mineralization (if any)": "nan",
+              "Sample Depth (m)": "nan",
+              "SiO2 (%)": "10.81",
+              "Al2O3(%)": "5.65",
+              "Fe2O3T(%)": "16.5",
+              "CaO (%)": "1.12",
+              "MgO (%)": "0.35",
+              "Na2O (%)": "0.09",
+              "K2O (%)": "0.76",
+              "TiO2 (%)": "0.37",
+              "MnO (%)": "44.9",
+              "P2O5 (%)": "0.26",
+              "LOI (%)": "14.28",
+              "Cu(mg/kg) ": "20.0",
+              "Pb(mg/kg)": "10.0",
+              "Zn (mg/kg)": "110.0",
+              "Co(mg/kg)": "100.0",
+              "Ni (mg/kg)": "235.0",
+              "Cr(mg/kg)": "5.0",
+              "Ba(mg/kg)": "nan",
+              "Ga(mg/kg)": "nan",
+              "Nb(mg/kg)": "nan",
+              "Sc(mg/kg)": "nan",
+              "Sr(mg/kg)": "nan",
+              "V(mg/kg)": "nan",
+              "Y(mg/kg)": "nan",
+              "Zr": "nan",
+              "Ba": "nan",
+              "Co": "nan",
+              "Cr": "nan",
+              "Cu": "nan",
+              "Ga": "nan",
+              "Nb": "nan",
+              "Ni": "nan",
+              "Pb(mg/kg).1": "nan",
+              "Sc(mg/kg).1": "nan",
+              "Sr(mg/kg).1": "nan",
+              "V(mg/kg).1": "nan",
+              "Y(mg/kg).1": "nan",
+              "Zn(mg/kg)": "nan",
+              "Zr(mg/kg)": "nan",
+              "Be(mg/kg)": "nan",
+              "Ge(mg/kg)": "nan",
+              "As(mg/kg)": "nan",
+              "Rb(mg/kg)": "nan",
+              "Sn(mg/kg)": "nan",
+              "La(mg/kg)": "nan",
+              "Ce(mg/kg)": "nan",
+              "Pr(mg/kg)": "nan",
+              "Nd(mg/kg)": "nan",
+              "Eu(mg/kg)": "nan",
+              "Sm(mg/kg)": "nan",
+              "Gd(mg/kg)": "nan",
+              "Tb(mg/kg)": "nan",
+              "Dy(mg/kg)": "nan",
+              "Ho(mg/kg)": "nan",
+              "Er(mg/kg)": "nan",
+              "Tm(mg/kg)": "nan",
+              "Yb(mg/kg)": "nan",
+              "Lu(mg/kg)": "nan",
+              "Hf(mg/kg)": "nan",
+              "Ta(mg/kg)": "nan",
+              "Th(mg/kg)": "nan",
+              "U(mg/kg)": "nan"
+            },
+            {
+              "Serial Number": "2",
+              "Sample Number": "49367/BRS_002",
+              "Sample Media": "Rock",
+              "Sample Type ": "BRS",
+              "Toposheet Number": "55O10",
+              "Latitude (DD)": "21.657",
+              "Longitude (DD)": "79.634",
+              "Elevation (meter)": "338",
+              "Sample Description / Lithology": "Mn mineralization debris scattered in the area",
+              "Mineralization (if any)": "nan",
+              "Sample Depth (m)": "nan",
+              "SiO2 (%)": "7.55",
+              "Al2O3(%)": "2.76",
+              "Fe2O3T(%)": "16.77",
+              "CaO (%)": "0.66",
+              "MgO (%)": "0.36",
+              "Na2O (%)": "0.09",
+              "K2O (%)": "0.93",
+              "TiO2 (%)": "0.09",
+              "MnO (%)": "61.84",
+              "P2O5 (%)": "0.37",
+              "LOI (%)": "3.97",
+              "Cu(mg/kg) ": "110.0",
+              "Pb(mg/kg)": "10.0",
+              "Zn (mg/kg)": "70.0",
+              "Co(mg/kg)": "145.0",
+              "Ni (mg/kg)": "110.0",
+              "Cr(mg/kg)": "10.0",
+              "Ba(mg/kg)": "nan",
+              "Ga(mg/kg)": "nan",
+              "Nb(mg/kg)": "nan",
+              "Sc(mg/kg)": "nan",
+              "Sr(mg/kg)": "nan",
+              "V(mg/kg)": "nan",
+              "Y(mg/kg)": "nan",
+              "Zr": "nan",
+              "Ba": "nan",
+              "Co": "nan",
+              "Cr": "nan",
+              "Cu": "nan",
+              "Ga": "nan",
+              "Nb": "nan",
+              "Ni": "nan",
+              "Pb(mg/kg).1": "nan",
+              "Sc(mg/kg).1": "nan",
+              "Sr(mg/kg).1": "nan",
+              "V(mg/kg).1": "nan",
+              "Y(mg/kg).1": "nan",
+              "Zn(mg/kg)": "nan",
+              "Zr(mg/kg)": "nan",
+              "Be(mg/kg)": "nan",
+              "Ge(mg/kg)": "nan",
+              "As(mg/kg)": "nan",
+              "Rb(mg/kg)": "nan",
+              "Sn(mg/kg)": "nan",
+              "La(mg/kg)": "nan",
+              "Ce(mg/kg)": "nan",
+              "Pr(mg/kg)": "nan",
+              "Nd(mg/kg)": "nan",
+              "Eu(mg/kg)": "nan",
+              "Sm(mg/kg)": "nan",
+              "Gd(mg/kg)": "nan",
+              "Tb(mg/kg)": "nan",
+              "Dy(mg/kg)": "nan",
+              "Ho(mg/kg)": "nan",
+              "Er(mg/kg)": "nan",
+              "Tm(mg/kg)": "nan",
+              "Yb(mg/kg)": "nan",
+              "Lu(mg/kg)": "nan",
+              "Hf(mg/kg)": "nan",
+              "Ta(mg/kg)": "nan",
+              "Th(mg/kg)": "nan",
+              "U(mg/kg)": "nan"
+            },
+            {
+              "Serial Number": "3",
+              "Sample Number": "49367/BRS_003",
+              "Sample Media": "Rock",
+              "Sample Type ": "BRS",
+              "Toposheet Number": "55O10",
+              "Latitude (DD)": "21.658",
+              "Longitude (DD)": "79.634",
+              "Elevation (meter)": "335",
+              "Sample Description / Lithology": "Lateritic capping developed over schistose rock",
+              "Mineralization (if any)": "nan",
+              "Sample Depth (m)": "nan",
+              "SiO2 (%)": "5.02",
+              "Al2O3(%)": "34.25",
+              "Fe2O3T(%)": "41.56",
+              "CaO (%)": "0.06",
+              "MgO (%)": "0.1",
+              "Na2O (%)": "0.04",
+              "K2O (%)": "0.07",
+              "TiO2 (%)": "3.11",
+              "MnO (%)": "0.18",
+              "P2O5 (%)": "0.06",
+              "LOI (%)": "15.34",
+              "Cu(mg/kg) ": "90.0",
+              "Pb(mg/kg)": "5.0",
+              "Zn (mg/kg)": "50.0",
+              "Co(mg/kg)": "5.0",
+              "Ni (mg/kg)": "15.0",
+              "Cr(mg/kg)": "245.0",
+              "Ba(mg/kg)": "nan",
+              "Ga(mg/kg)": "nan",
+              "Nb(mg/kg)": "nan",
+              "Sc(mg/kg)": "nan",
+              "Sr(mg/kg)": "nan",
+              "V(mg/kg)": "nan",
+              "Y(mg/kg)": "nan",
+              "Zr": "nan",
+              "Ba": "nan",
+              "Co": "nan",
+              "Cr": "nan",
+              "Cu": "nan",
+              "Ga": "nan",
+              "Nb": "nan",
+              "Ni": "nan",
+              "Pb(mg/kg).1": "nan",
+              "Sc(mg/kg).1": "nan",
+              "Sr(mg/kg).1": "nan",
+              "V(mg/kg).1": "nan",
+              "Y(mg/kg).1": "nan",
+              "Zn(mg/kg)": "nan",
+              "Zr(mg/kg)": "nan",
+              "Be(mg/kg)": "nan",
+              "Ge(mg/kg)": "nan",
+              "As(mg/kg)": "nan",
+              "Rb(mg/kg)": "nan",
+              "Sn(mg/kg)": "nan",
+              "La(mg/kg)": "nan",
+              "Ce(mg/kg)": "nan",
+              "Pr(mg/kg)": "nan",
+              "Nd(mg/kg)": "nan",
+              "Eu(mg/kg)": "nan",
+              "Sm(mg/kg)": "nan",
+              "Gd(mg/kg)": "nan",
+              "Tb(mg/kg)": "nan",
+              "Dy(mg/kg)": "nan",
+              "Ho(mg/kg)": "nan",
+              "Er(mg/kg)": "nan",
+              "Tm(mg/kg)": "nan",
+              "Yb(mg/kg)": "nan",
+              "Lu(mg/kg)": "nan",
+              "Hf(mg/kg)": "nan",
+              "Ta(mg/kg)": "nan",
+              "Th(mg/kg)": "nan",
+              "U(mg/kg)": "nan"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "relative_path": "raw/landstat/MIRPS_Landsat8_9_2013_2026.tif",
+      "filename": "MIRPS_Landsat8_9_2013_2026.tif",
+      "extension": ".tif",
+      "size_bytes": 165158526,
+      "size_human": "157.51 MB",
+      "file_type": "raster",
+      "driver": "GTiff",
+      "width": 5414,
+      "height": 3011,
+      "count": 7,
+      "crs": "EPSG:4326",
+      "resolution": [
+        0.00026949458523585647,
+        0.00026949458523585647
+      ],
+      "bounds": {
+        "minx": 79.10393712052525,
+        "miny": 21.250187035017753,
+        "maxx": 80.56298080499218,
+        "maxy": 22.061635231162917
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 2,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 3,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 4,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 5,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 6,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 7,
+          "dtype": "float64",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125.zip",
+      "filename": "Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125.zip",
+      "extension": ".zip",
+      "size_bytes": 101507,
+      "size_human": "99.13 KB",
+      "file_type": "zip",
+      "contained_files_count": 1,
+      "contained_files": [
+        "CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE.rar"
+      ]
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE.rar",
+      "filename": "20260805160119.48_GIS FILE.rar",
+      "extension": ".rar",
+      "size_bytes": 108189,
+      "size_human": "105.65 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25.mxd",
+      "filename": "LSM_49367_FS 2024_25.mxd",
+      "extension": ".mxd",
+      "size_bytes": 326656,
+      "size_human": "319.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Accelerators",
+      "filename": "Accelerators",
+      "extension": "",
+      "size_bytes": 6,
+      "size_human": "0.01 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Cadastral Editor",
+      "filename": "Cadastral Editor",
+      "extension": "",
+      "size_bytes": 2,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Contents",
+      "filename": "Contents",
+      "extension": "",
+      "size_bytes": 4,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/DataGraphs",
+      "filename": "DataGraphs",
+      "extension": "",
+      "size_bytes": 4,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/DataWindows",
+      "filename": "DataWindows",
+      "extension": "",
+      "size_bytes": 4,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Document Info",
+      "filename": "Document Info",
+      "extension": "",
+      "size_bytes": 30,
+      "size_human": "0.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/DocumentDatabase",
+      "filename": "DocumentDatabase",
+      "extension": "",
+      "size_bytes": 303,
+      "size_human": "0.30 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/DrawingDefaults",
+      "filename": "DrawingDefaults",
+      "extension": "",
+      "size_bytes": 1850,
+      "size_human": "1.81 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri Adjustment Tools",
+      "filename": "Esri Adjustment Tools",
+      "extension": "",
+      "size_bytes": 274,
+      "size_human": "0.27 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri ArcToolbox",
+      "filename": "Esri ArcToolbox",
+      "extension": "",
+      "size_bytes": 275487,
+      "size_human": "269.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri Map Service Publishing",
+      "filename": "Esri Map Service Publishing",
+      "extension": "",
+      "size_bytes": 272,
+      "size_human": "0.27 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri Object Editor",
+      "filename": "Esri Object Editor",
+      "extension": "",
+      "size_bytes": 107,
+      "size_human": "0.10 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri Replication Extension",
+      "filename": "Esri Replication Extension",
+      "extension": "",
+      "size_bytes": 0,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri Route Hatching Extension",
+      "filename": "Esri Route Hatching Extension",
+      "extension": "",
+      "size_bytes": 0,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri Snapping",
+      "filename": "Esri Snapping",
+      "extension": "",
+      "size_bytes": 0,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Esri Topology Extension",
+      "filename": "Esri Topology Extension",
+      "extension": "",
+      "size_bytes": 306,
+      "size_human": "0.30 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/KM6J834ID6MP45VMMJ0JDMFIV2",
+      "filename": "KM6J834ID6MP45VMMJ0JDMFIV2",
+      "extension": "",
+      "size_bytes": 0,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Maps",
+      "filename": "Maps",
+      "extension": "",
+      "size_bytes": 27036,
+      "size_human": "26.40 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Metadata",
+      "filename": "Metadata",
+      "extension": "",
+      "size_bytes": 100,
+      "size_human": "0.10 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/PageLayout",
+      "filename": "PageLayout",
+      "extension": "",
+      "size_bytes": 5266,
+      "size_human": "5.14 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/StyleGallery",
+      "filename": "StyleGallery",
+      "extension": "",
+      "size_bytes": 328,
+      "size_human": "0.32 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/TableProperties",
+      "filename": "TableProperties",
+      "extension": "",
+      "size_bytes": 2690,
+      "size_human": "2.63 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Templates",
+      "filename": "Templates",
+      "extension": "",
+      "size_bytes": 423,
+      "size_human": "0.41 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Toolbars",
+      "filename": "Toolbars",
+      "extension": "",
+      "size_bytes": 12,
+      "size_human": "0.01 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Tracking Analyst",
+      "filename": "Tracking Analyst",
+      "extension": "",
+      "size_bytes": 8,
+      "size_human": "0.01 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Tracking Environment",
+      "filename": "Tracking Environment",
+      "extension": "",
+      "size_bytes": 0,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/UIControls",
+      "filename": "UIControls",
+      "extension": "",
+      "size_bytes": 4,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/Version",
+      "filename": "Version",
+      "extension": "",
+      "size_bytes": 20,
+      "size_human": "0.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/LSM_49367_FS 2024_25/View",
+      "filename": "View",
+      "extension": "",
+      "size_bytes": 100,
+      "size_human": "0.10 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000001.freelist",
+      "filename": "a00000001.freelist",
+      "extension": ".freelist",
+      "size_bytes": 12632,
+      "size_human": "12.34 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000001.gdbindexes",
+      "filename": "a00000001.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 110,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000001.gdbtable",
+      "filename": "a00000001.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 2377,
+      "size_human": "2.32 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000001.gdbtablx",
+      "filename": "a00000001.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000001.TablesByName.atx",
+      "filename": "a00000001.TablesByName.atx",
+      "extension": ".atx",
+      "size_bytes": 20502,
+      "size_human": "20.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000002.gdbtable",
+      "filename": "a00000002.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 2055,
+      "size_human": "2.01 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000002.gdbtablx",
+      "filename": "a00000002.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000003.gdbindexes",
+      "filename": "a00000003.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 42,
+      "size_human": "0.04 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000003.gdbtable",
+      "filename": "a00000003.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 758,
+      "size_human": "0.74 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000003.gdbtablx",
+      "filename": "a00000003.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.CatItemsByPhysicalName.atx",
+      "filename": "a00000004.CatItemsByPhysicalName.atx",
+      "extension": ".atx",
+      "size_bytes": 28694,
+      "size_human": "28.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.CatItemsByType.atx",
+      "filename": "a00000004.CatItemsByType.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.FDO_UUID.atx",
+      "filename": "a00000004.FDO_UUID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.freelist",
+      "filename": "a00000004.freelist",
+      "extension": ".freelist",
+      "size_bytes": 69976,
+      "size_human": "68.34 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.gdbindexes",
+      "filename": "a00000004.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 310,
+      "size_human": "0.30 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.gdbtable",
+      "filename": "a00000004.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 1733624,
+      "size_human": "1.65 MB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.gdbtablx",
+      "filename": "a00000004.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.horizon",
+      "filename": "a00000004.horizon",
+      "extension": ".horizon",
+      "size_bytes": 32,
+      "size_human": "0.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000004.spx",
+      "filename": "a00000004.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000005.CatItemTypesByName.atx",
+      "filename": "a00000005.CatItemTypesByName.atx",
+      "extension": ".atx",
+      "size_bytes": 12310,
+      "size_human": "12.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000005.CatItemTypesByParentTypeID.atx",
+      "filename": "a00000005.CatItemTypesByParentTypeID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000005.CatItemTypesByUUID.atx",
+      "filename": "a00000005.CatItemTypesByUUID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000005.gdbindexes",
+      "filename": "a00000005.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 296,
+      "size_human": "0.29 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000005.gdbtable",
+      "filename": "a00000005.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 2021,
+      "size_human": "1.97 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000005.gdbtablx",
+      "filename": "a00000005.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.CatRelsByDestinationID.atx",
+      "filename": "a00000006.CatRelsByDestinationID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.CatRelsByOriginID.atx",
+      "filename": "a00000006.CatRelsByOriginID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.CatRelsByType.atx",
+      "filename": "a00000006.CatRelsByType.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.FDO_UUID.atx",
+      "filename": "a00000006.FDO_UUID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.freelist",
+      "filename": "a00000006.freelist",
+      "extension": ".freelist",
+      "size_bytes": 4440,
+      "size_human": "4.34 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.gdbindexes",
+      "filename": "a00000006.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 318,
+      "size_human": "0.31 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.gdbtable",
+      "filename": "a00000006.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 4716,
+      "size_human": "4.61 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000006.gdbtablx",
+      "filename": "a00000006.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.CatRelTypesByBackwardLabel.atx",
+      "filename": "a00000007.CatRelTypesByBackwardLabel.atx",
+      "extension": ".atx",
+      "size_bytes": 12310,
+      "size_human": "12.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.CatRelTypesByDestItemTypeID.atx",
+      "filename": "a00000007.CatRelTypesByDestItemTypeID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.CatRelTypesByForwardLabel.atx",
+      "filename": "a00000007.CatRelTypesByForwardLabel.atx",
+      "extension": ".atx",
+      "size_bytes": 12310,
+      "size_human": "12.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.CatRelTypesByName.atx",
+      "filename": "a00000007.CatRelTypesByName.atx",
+      "extension": ".atx",
+      "size_bytes": 12310,
+      "size_human": "12.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.CatRelTypesByOriginItemTypeID.atx",
+      "filename": "a00000007.CatRelTypesByOriginItemTypeID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.CatRelTypesByUUID.atx",
+      "filename": "a00000007.CatRelTypesByUUID.atx",
+      "extension": ".atx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.gdbindexes",
+      "filename": "a00000007.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 602,
+      "size_human": "0.59 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.gdbtable",
+      "filename": "a00000007.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 3626,
+      "size_human": "3.54 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000007.gdbtablx",
+      "filename": "a00000007.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000004a.gdbindexes",
+      "filename": "a0000004a.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 116,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000004a.gdbtable",
+      "filename": "a0000004a.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 21092,
+      "size_human": "20.60 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000004a.gdbtablx",
+      "filename": "a0000004a.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000004a.spx",
+      "filename": "a0000004a.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000052.freelist",
+      "filename": "a00000052.freelist",
+      "extension": ".freelist",
+      "size_bytes": 4440,
+      "size_human": "4.34 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000052.gdbindexes",
+      "filename": "a00000052.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 116,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000052.gdbtable",
+      "filename": "a00000052.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 13385,
+      "size_human": "13.07 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000052.gdbtablx",
+      "filename": "a00000052.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000052.spx",
+      "filename": "a00000052.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000053.gdbindexes",
+      "filename": "a00000053.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 116,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000053.gdbtable",
+      "filename": "a00000053.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 1221,
+      "size_human": "1.19 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000053.gdbtablx",
+      "filename": "a00000053.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000053.spx",
+      "filename": "a00000053.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000059.freelist",
+      "filename": "a00000059.freelist",
+      "extension": ".freelist",
+      "size_bytes": 4440,
+      "size_human": "4.34 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000059.gdbindexes",
+      "filename": "a00000059.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 116,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000059.gdbtable",
+      "filename": "a00000059.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 6457,
+      "size_human": "6.31 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000059.gdbtablx",
+      "filename": "a00000059.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a00000059.spx",
+      "filename": "a00000059.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005b.gdbindexes",
+      "filename": "a0000005b.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 116,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005b.gdbtable",
+      "filename": "a0000005b.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 2712,
+      "size_human": "2.65 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005b.gdbtablx",
+      "filename": "a0000005b.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005b.spx",
+      "filename": "a0000005b.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005f.gdbindexes",
+      "filename": "a0000005f.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 116,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005f.gdbtable",
+      "filename": "a0000005f.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 6978,
+      "size_human": "6.81 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005f.gdbtablx",
+      "filename": "a0000005f.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000005f.spx",
+      "filename": "a0000005f.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000006c.freelist",
+      "filename": "a0000006c.freelist",
+      "extension": ".freelist",
+      "size_bytes": 8536,
+      "size_human": "8.34 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000006c.gdbindexes",
+      "filename": "a0000006c.gdbindexes",
+      "extension": ".gdbindexes",
+      "size_bytes": 116,
+      "size_human": "0.11 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000006c.gdbtable",
+      "filename": "a0000006c.gdbtable",
+      "extension": ".gdbtable",
+      "size_bytes": 10525,
+      "size_human": "10.28 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000006c.gdbtablx",
+      "filename": "a0000006c.gdbtablx",
+      "extension": ".gdbtablx",
+      "size_bytes": 5152,
+      "size_human": "5.03 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/a0000006c.spx",
+      "filename": "a0000006c.spx",
+      "extension": ".spx",
+      "size_bytes": 4118,
+      "size_human": "4.02 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/gdb",
+      "filename": "gdb",
+      "extension": "",
+      "size_bytes": 4,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/timestamps",
+      "filename": "timestamps",
+      "extension": "",
+      "size_bytes": 400,
+      "size_human": "0.39 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/mineral_occurences/MnOccurrence/Exploration_Data_20260805160119_48_GIS_FILE_20260907000836125/CRO-24228-2024/GIS_FILES/20260805160119.48_GIS FILE/GIS FILE/NGDR_LSM_schema_FSP ID 49367/Schema_DM_LSM.gdb/_gdb.DESKTOP-8R10Q54.5052.7476.sr.lock",
+      "filename": "_gdb.DESKTOP-8R10Q54.5052.7476.sr.lock",
+      "extension": ".lock",
+      "size_bytes": 0,
+      "size_human": "0.00 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "raw/sentinel1/MIRPS_Sentinel1_2021_2026-0000000000-0000000000.tif",
+      "filename": "MIRPS_Sentinel1_2021_2026-0000000000-0000000000.tif",
+      "extension": ".tif",
+      "size_bytes": 554544618,
+      "size_human": "528.85 MB",
+      "file_type": "raster",
+      "driver": "GTiff",
+      "width": 13568,
+      "height": 9030,
+      "count": 3,
+      "crs": "EPSG:4326",
+      "resolution": [
+        8.983152841195215e-05,
+        8.983152841195215e-05
+      ],
+      "bounds": {
+        "minx": 79.10411678358206,
+        "miny": 21.250276866546162,
+        "maxx": 80.32295096107542,
+        "maxy": 22.06145556810609
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 2,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 3,
+          "dtype": "float64",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B02_10m.jp2",
+      "filename": "T44QMK_20251203T051059_B02_10m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 110518650,
+      "size_human": "105.40 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 10980,
+      "height": 10980,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B03_10m.jp2",
+      "filename": "T44QMK_20251203T051059_B03_10m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 114985446,
+      "size_human": "109.66 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 10980,
+      "height": 10980,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B04_10m.jp2",
+      "filename": "T44QMK_20251203T051059_B04_10m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 117173578,
+      "size_human": "111.75 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 10980,
+      "height": 10980,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B05_20m.jp2",
+      "filename": "T44QMK_20251203T051059_B05_20m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 33592932,
+      "size_human": "32.04 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 5490,
+      "height": 5490,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B06_20m.jp2",
+      "filename": "T44QMK_20251203T051059_B06_20m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 33743003,
+      "size_human": "32.18 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 5490,
+      "height": 5490,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B07_20m.jp2",
+      "filename": "T44QMK_20251203T051059_B07_20m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 33735769,
+      "size_human": "32.17 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 5490,
+      "height": 5490,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B08_10m.jp2",
+      "filename": "T44QMK_20251203T051059_B08_10m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 135528741,
+      "size_human": "129.25 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 10980,
+      "height": 10980,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        10.0,
+        10.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B11_20m.jp2",
+      "filename": "T44QMK_20251203T051059_B11_20m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 33752577,
+      "size_human": "32.19 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 5490,
+      "height": 5490,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B12_20m.jp2",
+      "filename": "T44QMK_20251203T051059_B12_20m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 33812127,
+      "size_human": "32.25 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 5490,
+      "height": 5490,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_B8A_20m.jp2",
+      "filename": "T44QMK_20251203T051059_B8A_20m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 33886198,
+      "size_human": "32.32 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 5490,
+      "height": 5490,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint16",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/sentinel2/T44QMK_20251203T051059_SCL_20m.jp2",
+      "filename": "T44QMK_20251203T051059_SCL_20m.jp2",
+      "extension": ".jp2",
+      "size_bytes": 1977205,
+      "size_human": "1.89 MB",
+      "file_type": "raster",
+      "driver": "JP2OpenJPEG",
+      "width": 5490,
+      "height": 5490,
+      "count": 1,
+      "crs": "EPSG:32644",
+      "resolution": [
+        20.0,
+        20.0
+      ],
+      "bounds": {
+        "minx": 399960.0,
+        "miny": 2390220.0,
+        "maxx": 509760.0,
+        "maxy": 2500020.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "uint8",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/weather/MIRPS_Landsat8_9_2013_2026.tif",
+      "filename": "MIRPS_Landsat8_9_2013_2026.tif",
+      "extension": ".tif",
+      "size_bytes": 165158526,
+      "size_human": "157.51 MB",
+      "file_type": "raster",
+      "driver": "GTiff",
+      "width": 5414,
+      "height": 3011,
+      "count": 7,
+      "crs": "EPSG:4326",
+      "resolution": [
+        0.00026949458523585647,
+        0.00026949458523585647
+      ],
+      "bounds": {
+        "minx": 79.10393712052525,
+        "miny": 21.250187035017753,
+        "maxx": 80.56298080499218,
+        "maxy": 22.061635231162917
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 2,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 3,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 4,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 5,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 6,
+          "dtype": "float64",
+          "nodata": null
+        },
+        {
+          "band_index": 7,
+          "dtype": "float64",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/weather/MIRPS_SMAP_SoilMoisture_2021_2026.tif",
+      "filename": "MIRPS_SMAP_SoilMoisture_2021_2026.tif",
+      "extension": ".tif",
+      "size_bytes": 3323,
+      "size_human": "3.25 KB",
+      "file_type": "raster",
+      "driver": "GTiff",
+      "width": 19,
+      "height": 11,
+      "count": 3,
+      "crs": "EPSG:4326",
+      "resolution": [
+        0.08084837557075693,
+        0.08084837557075693
+      ],
+      "bounds": {
+        "minx": 79.06971130820027,
+        "miny": 21.182274399538315,
+        "maxx": 80.60583044404466,
+        "maxy": 22.07160653081664
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "float32",
+          "nodata": null
+        },
+        {
+          "band_index": 2,
+          "dtype": "float32",
+          "nodata": null
+        },
+        {
+          "band_index": 3,
+          "dtype": "float32",
+          "nodata": null
+        }
+      ]
+    },
+    {
+      "relative_path": "raw/weather/rainfall.tif",
+      "filename": "rainfall.tif",
+      "extension": ".tif",
+      "size_bytes": 21928952,
+      "size_human": "20.91 MB",
+      "file_type": "raster",
+      "driver": "GTiff",
+      "width": 7200,
+      "height": 2400,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "resolution": [
+        0.05000000074505806,
+        0.05000000074505806
+      ],
+      "bounds": {
+        "minx": -180.0,
+        "miny": -60.00000178813934,
+        "maxx": 180.00000536441803,
+        "maxy": 60.0
+      },
+      "bands": [
+        {
+          "band_index": 1,
+          "dtype": "float32",
+          "nodata": null
+        }
+      ]
+    }
+  ],
+  "synthetic_inventory": [
+    {
+      "relative_path": "synthethic/synthetic.zip",
+      "filename": "synthetic.zip",
+      "extension": ".zip",
+      "size_bytes": 4581929,
+      "size_human": "4.37 MB",
+      "file_type": "zip",
+      "contained_files_count": 4,
+      "contained_files": [
+        "MIRPS_Synthetic_Operational_Data.zip",
+        "generate_mirps_datasets.py",
+        "GENERATION_SUMMARY.md",
+        "QUICK_START.md"
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/generate_mirps_datasets.py",
+      "filename": "generate_mirps_datasets.py",
+      "extension": ".py",
+      "size_bytes": 60069,
+      "size_human": "58.66 KB",
+      "file_type": "other"
+    },
+    {
+      "relative_path": "synthethic/synthetic/GENERATION_SUMMARY.md",
+      "filename": "GENERATION_SUMMARY.md",
+      "extension": ".md",
+      "size_bytes": 20969,
+      "size_human": "20.48 KB",
+      "file_type": "text",
+      "sample_lines": [
+        "# MIRPS Synthetic Operational Data \u2014 Generation Summary",
+        "**Date Generated:** 2026-09-06",
+        "**Generator Version:** 1.0",
+        "**Status:** \u2705 Complete & Validated"
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data.zip",
+      "filename": "MIRPS_Synthetic_Operational_Data.zip",
+      "extension": ".zip",
+      "size_bytes": 4555422,
+      "size_human": "4.34 MB",
+      "file_type": "zip",
+      "contained_files_count": 12,
+      "contained_files": [
+        "MIRPS_Synthetic_Operational_Data/",
+        "MIRPS_Synthetic_Operational_Data/operational_delays.csv",
+        "MIRPS_Synthetic_Operational_Data/mine_blocks.csv",
+        "MIRPS_Synthetic_Operational_Data/production_history.csv",
+        "MIRPS_Synthetic_Operational_Data/equipment_history.csv",
+        "MIRPS_Synthetic_Operational_Data/relationships.md",
+        "MIRPS_Synthetic_Operational_Data/README.md",
+        "MIRPS_Synthetic_Operational_Data/maintenance_history.csv",
+        "MIRPS_Synthetic_Operational_Data/equipment_events.csv",
+        "MIRPS_Synthetic_Operational_Data/mine_blocks.geojson",
+        "MIRPS_Synthetic_Operational_Data/validate_mirps_data.py",
+        "MIRPS_Synthetic_Operational_Data/data_dictionary.csv"
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/QUICK_START.md",
+      "filename": "QUICK_START.md",
+      "extension": ".md",
+      "size_bytes": 9804,
+      "size_human": "9.57 KB",
+      "file_type": "text",
+      "sample_lines": [
+        "# MIRPS Synthetic Datasets \u2014 Quick Start Guide",
+        "## \ud83d\ude80 Get Started in 5 Minutes",
+        "### Step 1: Extract Archive"
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/data_dictionary.csv",
+      "filename": "data_dictionary.csv",
+      "extension": ".csv",
+      "size_bytes": 6786,
+      "size_human": "6.63 KB",
+      "file_type": "csv",
+      "row_count": 74,
+      "col_count": 7,
+      "columns": [
+        "dataset",
+        "column",
+        "data_type",
+        "description",
+        "allowed_values",
+        "example",
+        "required"
+      ],
+      "missing_values": {
+        "dataset": 0,
+        "column": 0,
+        "data_type": 0,
+        "description": 0,
+        "allowed_values": 0,
+        "example": 0,
+        "required": 0
+      },
+      "dtypes": {
+        "dataset": "object",
+        "column": "object",
+        "data_type": "object",
+        "description": "object",
+        "allowed_values": "object",
+        "example": "object",
+        "required": "bool"
+      },
+      "head": [
+        {
+          "dataset": "production_history",
+          "column": "date",
+          "data_type": "string",
+          "description": "Date of production record (YYYY-MM-DD)",
+          "allowed_values": "ISO 8601 date",
+          "example": "2024-01-15",
+          "required": "True"
+        },
+        {
+          "dataset": "production_history",
+          "column": "mine_id",
+          "data_type": "string",
+          "description": "Unique mine identifier",
+          "allowed_values": "BALAGHAT, UKWA, TIRODI, etc.",
+          "example": "BALAGHAT",
+          "required": "True"
+        },
+        {
+          "dataset": "production_history",
+          "column": "block_id",
+          "data_type": "string",
+          "description": "Unique block identifier within mine",
+          "allowed_values": "MINE_B##",
+          "example": "BALAGHAT_B01",
+          "required": "True"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/equipment_events.csv",
+      "filename": "equipment_events.csv",
+      "extension": ".csv",
+      "size_bytes": 310977,
+      "size_human": "303.69 KB",
+      "file_type": "csv",
+      "row_count": 2672,
+      "col_count": 10,
+      "columns": [
+        "event_id",
+        "equipment_id",
+        "mine_id",
+        "timestamp",
+        "event_type",
+        "duration_hours",
+        "severity",
+        "cause",
+        "production_impact_tonnes",
+        "source_type"
+      ],
+      "missing_values": {
+        "event_id": 0,
+        "equipment_id": 0,
+        "mine_id": 0,
+        "timestamp": 0,
+        "event_type": 0,
+        "duration_hours": 0,
+        "severity": 0,
+        "cause": 0,
+        "production_impact_tonnes": 0,
+        "source_type": 0
+      },
+      "dtypes": {
+        "event_id": "object",
+        "equipment_id": "object",
+        "mine_id": "object",
+        "timestamp": "object",
+        "event_type": "object",
+        "duration_hours": "float64",
+        "severity": "object",
+        "cause": "object",
+        "production_impact_tonnes": "float64",
+        "source_type": "object"
+      },
+      "head": [
+        {
+          "event_id": "EVT_000001",
+          "equipment_id": "UKWA_Winder02",
+          "mine_id": "UKWA",
+          "timestamp": "2024-01-01 22:24:00",
+          "event_type": "BREAKDOWN",
+          "duration_hours": "5.22",
+          "severity": "MEDIUM",
+          "cause": "NORMAL_WEAR",
+          "production_impact_tonnes": "25.5",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "event_id": "EVT_000002",
+          "equipment_id": "DONGRI_BUZURG_Drill02",
+          "mine_id": "DONGRI_BUZURG",
+          "timestamp": "2024-01-01 20:48:00",
+          "event_type": "HYDRAULIC_FAILURE",
+          "duration_hours": "23.33",
+          "severity": "CRITICAL",
+          "cause": "UNKNOWN",
+          "production_impact_tonnes": "258.62",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "event_id": "EVT_000003",
+          "equipment_id": "UKWA_Conveyor05",
+          "mine_id": "UKWA",
+          "timestamp": "2024-01-02 12:06:00",
+          "event_type": "UNEXPECTED_STOP",
+          "duration_hours": "1.01",
+          "severity": "MEDIUM",
+          "cause": "UNKNOWN",
+          "production_impact_tonnes": "84.05",
+          "source_type": "SYNTHETIC_DEMO"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/equipment_history.csv",
+      "filename": "equipment_history.csv",
+      "extension": ".csv",
+      "size_bytes": 10259928,
+      "size_human": "9.78 MB",
+      "file_type": "csv",
+      "row_count": 108225,
+      "col_count": 13,
+      "columns": [
+        "equipment_id",
+        "mine_id",
+        "equipment_type",
+        "date",
+        "operating_hours",
+        "downtime_hours",
+        "availability",
+        "maintenance_due",
+        "maintenance_type",
+        "failure_count",
+        "fuel_consumption",
+        "utilization",
+        "source_type"
+      ],
+      "missing_values": {
+        "equipment_id": 0,
+        "mine_id": 0,
+        "equipment_type": 0,
+        "date": 0,
+        "operating_hours": 0,
+        "downtime_hours": 0,
+        "availability": 0,
+        "maintenance_due": 0,
+        "maintenance_type": 980,
+        "failure_count": 0,
+        "fuel_consumption": 0,
+        "utilization": 0,
+        "source_type": 0
+      },
+      "dtypes": {
+        "equipment_id": "object",
+        "mine_id": "object",
+        "equipment_type": "object",
+        "date": "object",
+        "operating_hours": "float64",
+        "downtime_hours": "float64",
+        "availability": "float64",
+        "maintenance_due": "int64",
+        "maintenance_type": "object",
+        "failure_count": "int64",
+        "fuel_consumption": "float64",
+        "utilization": "float64",
+        "source_type": "object"
+      },
+      "head": [
+        {
+          "equipment_id": "BALAGHAT_Dump_Truck01",
+          "mine_id": "BALAGHAT",
+          "equipment_type": "Dump",
+          "date": "2024-01-01",
+          "operating_hours": "18.51",
+          "downtime_hours": "6.47",
+          "availability": "0.73",
+          "maintenance_due": "0",
+          "maintenance_type": "nan",
+          "failure_count": "0",
+          "fuel_consumption": "265.45",
+          "utilization": "0.771",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "equipment_id": "BALAGHAT_Dump_Truck02",
+          "mine_id": "BALAGHAT",
+          "equipment_type": "Dump",
+          "date": "2024-01-01",
+          "operating_hours": "7.51",
+          "downtime_hours": "10.14",
+          "availability": "0.577",
+          "maintenance_due": "0",
+          "maintenance_type": "nan",
+          "failure_count": "0",
+          "fuel_consumption": "102.98",
+          "utilization": "0.313",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "equipment_id": "BALAGHAT_Conveyor03",
+          "mine_id": "BALAGHAT",
+          "equipment_type": "Conveyor03",
+          "date": "2024-01-01",
+          "operating_hours": "4.97",
+          "downtime_hours": "0.58",
+          "availability": "0.976",
+          "maintenance_due": "0",
+          "maintenance_type": "nan",
+          "failure_count": "0",
+          "fuel_consumption": "72.85",
+          "utilization": "0.207",
+          "source_type": "SYNTHETIC_DEMO"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/maintenance_history.csv",
+      "filename": "maintenance_history.csv",
+      "extension": ".csv",
+      "size_bytes": 198851,
+      "size_human": "194.19 KB",
+      "file_type": "csv",
+      "row_count": 2176,
+      "col_count": 10,
+      "columns": [
+        "maintenance_id",
+        "equipment_id",
+        "mine_id",
+        "maintenance_date",
+        "maintenance_type",
+        "duration_hours",
+        "cost",
+        "failure_before_maintenance",
+        "failure_after_maintenance",
+        "source_type"
+      ],
+      "missing_values": {
+        "maintenance_id": 0,
+        "equipment_id": 0,
+        "mine_id": 0,
+        "maintenance_date": 0,
+        "maintenance_type": 0,
+        "duration_hours": 0,
+        "cost": 0,
+        "failure_before_maintenance": 0,
+        "failure_after_maintenance": 0,
+        "source_type": 0
+      },
+      "dtypes": {
+        "maintenance_id": "object",
+        "equipment_id": "object",
+        "mine_id": "object",
+        "maintenance_date": "object",
+        "maintenance_type": "object",
+        "duration_hours": "float64",
+        "cost": "float64",
+        "failure_before_maintenance": "int64",
+        "failure_after_maintenance": "int64",
+        "source_type": "object"
+      },
+      "head": [
+        {
+          "maintenance_id": "MNT_000001",
+          "equipment_id": "BALAGHAT_Winder06",
+          "mine_id": "BALAGHAT",
+          "maintenance_date": "2024-01-01",
+          "maintenance_type": "PREVENTIVE",
+          "duration_hours": "2.94",
+          "cost": "2438.69",
+          "failure_before_maintenance": "0",
+          "failure_after_maintenance": "0",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "maintenance_id": "MNT_000002",
+          "equipment_id": "UKWA_Winder02",
+          "mine_id": "UKWA",
+          "maintenance_date": "2024-01-01",
+          "maintenance_type": "CORRECTIVE",
+          "duration_hours": "9.27",
+          "cost": "8760.04",
+          "failure_before_maintenance": "1",
+          "failure_after_maintenance": "0",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "maintenance_id": "MNT_000003",
+          "equipment_id": "BELDONGRI_Loader09",
+          "mine_id": "BELDONGRI",
+          "maintenance_date": "2024-01-01",
+          "maintenance_type": "OVERHAUL",
+          "duration_hours": "71.62",
+          "cost": "15202.58",
+          "failure_before_maintenance": "0",
+          "failure_after_maintenance": "0",
+          "source_type": "SYNTHETIC_DEMO"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/mine_blocks.csv",
+      "filename": "mine_blocks.csv",
+      "extension": ".csv",
+      "size_bytes": 11612,
+      "size_human": "11.34 KB",
+      "file_type": "csv",
+      "row_count": 68,
+      "col_count": 13,
+      "columns": [
+        "block_id",
+        "mine_id",
+        "latitude",
+        "longitude",
+        "estimated_ore_tonnes",
+        "estimated_grade_mn",
+        "development_percent",
+        "drilling_percent",
+        "blasting_readiness",
+        "access_readiness",
+        "equipment_available",
+        "block_status",
+        "source_type"
+      ],
+      "missing_values": {
+        "block_id": 0,
+        "mine_id": 0,
+        "latitude": 0,
+        "longitude": 0,
+        "estimated_ore_tonnes": 0,
+        "estimated_grade_mn": 0,
+        "development_percent": 0,
+        "drilling_percent": 0,
+        "blasting_readiness": 0,
+        "access_readiness": 0,
+        "equipment_available": 0,
+        "block_status": 0,
+        "source_type": 0
+      },
+      "dtypes": {
+        "block_id": "object",
+        "mine_id": "object",
+        "latitude": "float64",
+        "longitude": "float64",
+        "estimated_ore_tonnes": "float64",
+        "estimated_grade_mn": "float64",
+        "development_percent": "int64",
+        "drilling_percent": "int64",
+        "blasting_readiness": "float64",
+        "access_readiness": "float64",
+        "equipment_available": "int64",
+        "block_status": "object",
+        "source_type": "object"
+      },
+      "head": [
+        {
+          "block_id": "BALAGHAT_B01",
+          "mine_id": "BALAGHAT",
+          "latitude": "21.879604298686026",
+          "longitude": "80.19506347898661",
+          "estimated_ore_tonnes": "40086.09501227461",
+          "estimated_grade_mn": "32.90550473839461",
+          "development_percent": "94",
+          "drilling_percent": "84",
+          "blasting_readiness": "0.9197056874649612",
+          "access_readiness": "0.8005575058716043",
+          "equipment_available": "4",
+          "block_status": "EXPLORATION",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "block_id": "BALAGHAT_B02",
+          "mine_id": "BALAGHAT",
+          "latitude": "21.8969409852162",
+          "longitude": "80.25996426408004",
+          "estimated_ore_tonnes": "14555.259980522427",
+          "estimated_grade_mn": "20.454749016213015",
+          "development_percent": "40",
+          "drilling_percent": "42",
+          "blasting_readiness": "0.5825453457757226",
+          "access_readiness": "0.762378215816119",
+          "equipment_available": "5",
+          "block_status": "EXPLORATION",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "block_id": "BALAGHAT_B03",
+          "mine_id": "BALAGHAT",
+          "latitude": "21.85242746602584",
+          "longitude": "80.21670609717152",
+          "estimated_ore_tonnes": "7099.954844612694",
+          "estimated_grade_mn": "44.212665565243775",
+          "development_percent": "34",
+          "drilling_percent": "71",
+          "blasting_readiness": "0.4543638607196925",
+          "access_readiness": "0.8091930046665436",
+          "equipment_available": "5",
+          "block_status": "BLASTING_READY",
+          "source_type": "SYNTHETIC_DEMO"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/mine_blocks.geojson",
+      "filename": "mine_blocks.geojson",
+      "extension": ".geojson",
+      "size_bytes": 45328,
+      "size_human": "44.27 KB",
+      "file_type": "vector",
+      "feature_count": 68,
+      "crs": "EPSG:4326",
+      "bounds": {
+        "minx": 79.17529901679893,
+        "miny": 21.299408667678613,
+        "maxx": 80.50714664739262,
+        "maxy": 21.97751771975695
+      },
+      "geometry_types": [
+        "Point"
+      ],
+      "columns": [
+        "block_id",
+        "mine_id",
+        "estimated_ore_tonnes",
+        "estimated_grade_mn",
+        "development_percent",
+        "drilling_percent",
+        "blasting_readiness",
+        "access_readiness",
+        "equipment_available",
+        "block_status",
+        "source_type"
+      ],
+      "missing_values": {
+        "block_id": 0,
+        "mine_id": 0,
+        "estimated_ore_tonnes": 0,
+        "estimated_grade_mn": 0,
+        "development_percent": 0,
+        "drilling_percent": 0,
+        "blasting_readiness": 0,
+        "access_readiness": 0,
+        "equipment_available": 0,
+        "block_status": 0,
+        "source_type": 0
+      },
+      "head": [
+        {
+          "block_id": "BALAGHAT_B01",
+          "mine_id": "BALAGHAT",
+          "estimated_ore_tonnes": "40086.095012274614",
+          "estimated_grade_mn": "32.90550473839461",
+          "development_percent": "94.0",
+          "drilling_percent": "84.0",
+          "blasting_readiness": "0.9197056874649611",
+          "access_readiness": "0.8005575058716043",
+          "equipment_available": "4",
+          "block_status": "EXPLORATION",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "block_id": "BALAGHAT_B02",
+          "mine_id": "BALAGHAT",
+          "estimated_ore_tonnes": "14555.259980522427",
+          "estimated_grade_mn": "20.454749016213018",
+          "development_percent": "40.0",
+          "drilling_percent": "42.0",
+          "blasting_readiness": "0.5825453457757226",
+          "access_readiness": "0.762378215816119",
+          "equipment_available": "5",
+          "block_status": "EXPLORATION",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "block_id": "BALAGHAT_B03",
+          "mine_id": "BALAGHAT",
+          "estimated_ore_tonnes": "7099.954844612694",
+          "estimated_grade_mn": "44.212665565243775",
+          "development_percent": "34.0",
+          "drilling_percent": "71.0",
+          "blasting_readiness": "0.4543638607196925",
+          "access_readiness": "0.8091930046665436",
+          "equipment_available": "5",
+          "block_status": "BLASTING_READY",
+          "source_type": "SYNTHETIC_DEMO"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/operational_delays.csv",
+      "filename": "operational_delays.csv",
+      "extension": ".csv",
+      "size_bytes": 11660,
+      "size_human": "11.39 KB",
+      "file_type": "csv",
+      "row_count": 131,
+      "col_count": 9,
+      "columns": [
+        "date",
+        "mine_id",
+        "block_id",
+        "delay_type",
+        "duration_hours",
+        "severity",
+        "cause",
+        "production_loss_tonnes",
+        "source_type"
+      ],
+      "missing_values": {
+        "date": 0,
+        "mine_id": 0,
+        "block_id": 0,
+        "delay_type": 0,
+        "duration_hours": 0,
+        "severity": 0,
+        "cause": 0,
+        "production_loss_tonnes": 0,
+        "source_type": 0
+      },
+      "dtypes": {
+        "date": "object",
+        "mine_id": "object",
+        "block_id": "object",
+        "delay_type": "object",
+        "duration_hours": "float64",
+        "severity": "object",
+        "cause": "object",
+        "production_loss_tonnes": "float64",
+        "source_type": "object"
+      },
+      "head": [
+        {
+          "date": "2024-01-19",
+          "mine_id": "KANDRI",
+          "block_id": "KANDRI_B07",
+          "delay_type": "VENTILATION",
+          "duration_hours": "7.61",
+          "severity": "MEDIUM",
+          "cause": "SUPPLY_CHAIN",
+          "production_loss_tonnes": "92.53",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "date": "2024-01-27",
+          "mine_id": "SITAPATORE",
+          "block_id": "SITAPATORE_B07",
+          "delay_type": "BLASTING",
+          "duration_hours": "1.97",
+          "severity": "LOW",
+          "cause": "OVERHEATING",
+          "production_loss_tonnes": "33.2",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "date": "2024-01-28",
+          "mine_id": "DONGRI_BUZURG",
+          "block_id": "DONGRI_BUZURG_B08",
+          "delay_type": "MAINTENANCE",
+          "duration_hours": "1.78",
+          "severity": "LOW",
+          "cause": "SUPPLY_CHAIN",
+          "production_loss_tonnes": "18.54",
+          "source_type": "SYNTHETIC_DEMO"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/production_history.csv",
+      "filename": "production_history.csv",
+      "extension": ".csv",
+      "size_bytes": 8868024,
+      "size_human": "8.46 MB",
+      "file_type": "csv",
+      "row_count": 66300,
+      "col_count": 19,
+      "columns": [
+        "date",
+        "mine_id",
+        "block_id",
+        "target_tonnes",
+        "actual_tonnes",
+        "ore_grade_mn",
+        "planned_tonnes",
+        "development_status",
+        "drilling_status",
+        "blasting_status",
+        "haulage_status",
+        "equipment_availability",
+        "downtime_hours",
+        "rainfall_mm",
+        "soil_moisture",
+        "shortfall_tonnes",
+        "shortfall_flag",
+        "shortfall_percentage",
+        "source_type"
+      ],
+      "missing_values": {
+        "date": 0,
+        "mine_id": 0,
+        "block_id": 0,
+        "target_tonnes": 0,
+        "actual_tonnes": 0,
+        "ore_grade_mn": 0,
+        "planned_tonnes": 0,
+        "development_status": 0,
+        "drilling_status": 0,
+        "blasting_status": 0,
+        "haulage_status": 0,
+        "equipment_availability": 0,
+        "downtime_hours": 0,
+        "rainfall_mm": 0,
+        "soil_moisture": 0,
+        "shortfall_tonnes": 0,
+        "shortfall_flag": 0,
+        "shortfall_percentage": 0,
+        "source_type": 0
+      },
+      "dtypes": {
+        "date": "object",
+        "mine_id": "object",
+        "block_id": "object",
+        "target_tonnes": "float64",
+        "actual_tonnes": "float64",
+        "ore_grade_mn": "float64",
+        "planned_tonnes": "float64",
+        "development_status": "float64",
+        "drilling_status": "float64",
+        "blasting_status": "float64",
+        "haulage_status": "float64",
+        "equipment_availability": "float64",
+        "downtime_hours": "float64",
+        "rainfall_mm": "float64",
+        "soil_moisture": "float64",
+        "shortfall_tonnes": "float64",
+        "shortfall_flag": "int64",
+        "shortfall_percentage": "float64",
+        "source_type": "object"
+      },
+      "head": [
+        {
+          "date": "2024-01-01",
+          "mine_id": "BALAGHAT",
+          "block_id": "BALAGHAT_B01",
+          "target_tonnes": "620.92",
+          "actual_tonnes": "494.77",
+          "ore_grade_mn": "32.55",
+          "planned_tonnes": "620.92",
+          "development_status": "0.819",
+          "drilling_status": "0.774",
+          "blasting_status": "0.521",
+          "haulage_status": "0.874",
+          "equipment_availability": "0.681",
+          "downtime_hours": "0.0",
+          "rainfall_mm": "2.78",
+          "soil_moisture": "0.101",
+          "shortfall_tonnes": "126.14",
+          "shortfall_flag": "1",
+          "shortfall_percentage": "20.32",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "date": "2024-01-01",
+          "mine_id": "BALAGHAT",
+          "block_id": "BALAGHAT_B02",
+          "target_tonnes": "709.76",
+          "actual_tonnes": "617.05",
+          "ore_grade_mn": "36.76",
+          "planned_tonnes": "709.76",
+          "development_status": "0.643",
+          "drilling_status": "0.925",
+          "blasting_status": "0.848",
+          "haulage_status": "0.763",
+          "equipment_availability": "0.977",
+          "downtime_hours": "4.67",
+          "rainfall_mm": "14.43",
+          "soil_moisture": "0.119",
+          "shortfall_tonnes": "92.71",
+          "shortfall_flag": "1",
+          "shortfall_percentage": "13.06",
+          "source_type": "SYNTHETIC_DEMO"
+        },
+        {
+          "date": "2024-01-01",
+          "mine_id": "BALAGHAT",
+          "block_id": "BALAGHAT_B03",
+          "target_tonnes": "828.94",
+          "actual_tonnes": "683.69",
+          "ore_grade_mn": "35.13",
+          "planned_tonnes": "828.94",
+          "development_status": "0.93",
+          "drilling_status": "0.593",
+          "blasting_status": "0.541",
+          "haulage_status": "0.854",
+          "equipment_availability": "0.968",
+          "downtime_hours": "4.59",
+          "rainfall_mm": "6.32",
+          "soil_moisture": "0.335",
+          "shortfall_tonnes": "145.25",
+          "shortfall_flag": "1",
+          "shortfall_percentage": "17.52",
+          "source_type": "SYNTHETIC_DEMO"
+        }
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/README.md",
+      "filename": "README.md",
+      "extension": ".md",
+      "size_bytes": 8799,
+      "size_human": "8.59 KB",
+      "file_type": "text",
+      "sample_lines": [
+        "# MIRPS Synthetic Operational Dataset",
+        "## Project: MOIL Intelligent Reserve & Production System (MnVision 360)",
+        "**Important:** These datasets are **SYNTHETIC DEMONSTRATION DATA** and do not represent actual MOIL internal operational records, production figures, equipment records, reserves, grades, or mine block information."
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/relationships.md",
+      "filename": "relationships.md",
+      "extension": ".md",
+      "size_bytes": 7856,
+      "size_human": "7.67 KB",
+      "file_type": "text",
+      "sample_lines": [
+        "# MIRPS Data Relationships",
+        "## Entity-Relationship Diagram (Text)",
+        "```"
+      ]
+    },
+    {
+      "relative_path": "synthethic/synthetic/MIRPS_Synthetic_Operational_Data/MIRPS_Synthetic_Operational_Data/validate_mirps_data.py",
+      "filename": "validate_mirps_data.py",
+      "extension": ".py",
+      "size_bytes": 21312,
+      "size_human": "20.81 KB",
+      "file_type": "other"
+    }
+  ]
+}

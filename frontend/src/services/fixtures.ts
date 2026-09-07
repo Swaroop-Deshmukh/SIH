@@ -30,7 +30,7 @@ export const FIXTURE_MINES: Mine[] = [
   {
     id: 'b1000000-0000-0000-0000-000000000002',
     mine_code: 'BLG-02',
-    mine_name: 'Central Balaghat Mine',
+    mine_name: 'Central Balaghat Mine (Ukwa)',
     location_district: 'Balaghat',
     location_state: 'Madhya Pradesh',
     area_sqkm: 14.40,
@@ -44,7 +44,7 @@ export const FIXTURE_MINES: Mine[] = [
   {
     id: 'b1000000-0000-0000-0000-000000000003',
     mine_code: 'BLG-03',
-    mine_name: 'South Balaghat Mine',
+    mine_name: 'South Balaghat Mine (Tirodi)',
     location_district: 'Balaghat',
     location_state: 'Madhya Pradesh',
     area_sqkm: 17.28,
@@ -113,15 +113,15 @@ export const FIXTURE_TARGETS: DrillTarget[] = [
     priority_level: 'VERY_HIGH',
     status: 'SURVEY_RECOMMENDED',
     is_prototype: true,
-    recommended_action: 'Ground geological survey recommended. High prospectivity supported by favourable structural lineament intersection.',
+    recommended_action: 'Ground geological survey recommended. High prospectivity supported by proximity to geochemical sample anomalies and structural lineaments.',
     shap_summary: [
-      { feature: 'Favourable Sausar Formation', contribution: 0.18, direction: 'positive' },
-      { feature: 'Proximity to Faults & Lineaments', contribution: 0.14, direction: 'positive' },
-      { feature: 'Sentinel-2 Seasonal NDVI', contribution: 0.12, direction: 'positive' },
-      { feature: 'Topographic Position Index (SRTM)', contribution: 0.08, direction: 'positive' },
-      { feature: 'Sentinel-1 C-band VV/VH Ratio', contribution: 0.05, direction: 'positive' },
-      { feature: 'Terrain Ruggedness Penalty', contribution: -0.06, direction: 'negative' },
-      { feature: 'Distance from Accessible Roads', contribution: -0.08, direction: 'negative' }
+      { feature: 'Nearest Geochemical Sample (dist_chem_km)', contribution: 0.31, direction: 'positive' },
+      { feature: 'Road Network Proximity (dist_roads_km)', contribution: 0.21, direction: 'positive' },
+      { feature: 'SMAP Soil Moisture Index', contribution: 0.06, direction: 'positive' },
+      { feature: 'Nearest Sample MnO (%)', contribution: 0.05, direction: 'positive' },
+      { feature: 'Sentinel-2 NIR Band (B08)', contribution: 0.05, direction: 'positive' },
+      { feature: 'CHIRPS Annual Rainfall', contribution: 0.04, direction: 'positive' },
+      { feature: 'Clay Mineral Index (B11/B12)', contribution: 0.03, direction: 'positive' }
     ]
   },
   {
@@ -143,10 +143,10 @@ export const FIXTURE_TARGETS: DrillTarget[] = [
     is_prototype: true,
     recommended_action: 'Ground magnetic & gravity geophysics recommended to resolve structural uncertainty prior to exploratory drilling.',
     shap_summary: [
-      { feature: 'Favourable Sausar Formation', contribution: 0.16, direction: 'positive' },
+      { feature: 'Favourable Sausar Formation (Lithology_LSM)', contribution: 0.16, direction: 'positive' },
       { feature: 'SWIR Band Ratio (B11/B12)', contribution: 0.14, direction: 'positive' },
-      { feature: 'Proximity to Faults & Lineaments', contribution: 0.10, direction: 'positive' },
-      { feature: 'Slope & Aspect Characteristics', contribution: 0.06, direction: 'positive' }
+      { feature: 'Proximity to Mineralization Lines (Mineralization_Line_LSM)', contribution: 0.10, direction: 'positive' },
+      { feature: 'DEM Slope & Elevation Profile', contribution: 0.06, direction: 'positive' }
     ]
   },
   {
@@ -168,10 +168,10 @@ export const FIXTURE_TARGETS: DrillTarget[] = [
     is_prototype: true,
     recommended_action: 'Soil geochemistry program recommended. High structural density but elevated uncertainty due to sparse data coverage.',
     shap_summary: [
-      { feature: 'Lineament Density & Shear Zone', contribution: 0.19, direction: 'positive' },
-      { feature: 'Elevation Ridge Profile', contribution: 0.09, direction: 'positive' },
-      { feature: 'Accessibility Penalty (>3km)', contribution: -0.12, direction: 'negative' },
-      { feature: 'Missing Geochemical Coverage', contribution: -0.09, direction: 'negative' }
+      { feature: 'Mineralization Line Proximity', contribution: 0.19, direction: 'positive' },
+      { feature: 'SRTM Elevation Profile', contribution: 0.09, direction: 'positive' },
+      { feature: 'Accessibility Distance (>3km)', contribution: -0.12, direction: 'negative' },
+      { feature: 'Sparse Geochemical Sampling', contribution: -0.09, direction: 'negative' }
     ]
   }
 ];
@@ -186,22 +186,22 @@ export const FIXTURE_EQUIPMENT: Equipment[] = [
 
 export const FIXTURE_PRODUCTION_SUMMARY: ProductionSummary = {
   status: 'OPERATIONAL',
-  data_source: 'PROTOTYPE_SIMULATION',
-  target_tonnes: 50000,
-  actual_tonnes: 46200,
-  gap_tonnes: 3800,
-  achievement_pct: 92.4,
-  active_mines: 5
+  data_source: 'REAL_PROCESSED_OPERATIONS_DATA',
+  target_tonnes: 34883551,
+  actual_tonnes: 28886275,
+  gap_tonnes: 5997276,
+  achievement_pct: 82.8,
+  active_mines: 10
 };
 
 export const FIXTURE_FORECAST: ProductionForecastPoint[] = [
-  { day: 'Day 1', target: 7140, forecast: 6800, lower: 6500, upper: 7100 },
-  { day: 'Day 2', target: 7140, forecast: 6720, lower: 6400, upper: 7040 },
-  { day: 'Day 3', target: 7140, forecast: 6650, lower: 6300, upper: 6980 },
-  { day: 'Day 4', target: 7140, forecast: 6580, lower: 6200, upper: 6900 },
-  { day: 'Day 5', target: 7140, forecast: 6500, lower: 6100, upper: 6850 },
-  { day: 'Day 6', target: 7140, forecast: 6480, lower: 6050, upper: 6800 },
-  { day: 'Day 7', target: 7140, forecast: 6470, lower: 6000, upper: 6820 }
+  { day: '2026-08-26', target: 27169, forecast: 22038, lower: 20275, upper: 27712 },
+  { day: '2026-08-27', target: 28778, forecast: 23434, lower: 21559, upper: 29354 },
+  { day: '2026-08-28', target: 28226, forecast: 23347, lower: 21479, upper: 28791 },
+  { day: '2026-08-29', target: 25641, forecast: 20803, lower: 19139, upper: 26154 },
+  { day: '2026-08-30', target: 28663, forecast: 23668, lower: 21775, upper: 29236 },
+  { day: '2026-08-31', target: 29288, forecast: 24396, lower: 22444, upper: 29874 },
+  { day: '2026-09-01', target: 28508, forecast: 22940, lower: 21105, upper: 29078 }
 ];
 
 export const FIXTURE_PIPELINE_STAGES: PipelineStage[] = [
@@ -216,21 +216,21 @@ export const FIXTURE_PIPELINE_STAGES: PipelineStage[] = [
 
 export const FIXTURE_SHORTFALL: ShortfallPrediction = {
   id: 'sf-1',
-  mine_name: 'North Balaghat Mine (BLG-01)',
-  prediction_date: '2026-09-07',
+  mine_name: 'Balaghat Mining Complex (10 Operational Sites)',
+  prediction_date: '2026-09-01',
   forecast_period_days: 7,
-  target_tonnes: 50000,
-  predicted_tonnes: 46200,
-  expected_gap_tonnes: 3800,
+  target_tonnes: 28508,
+  predicted_tonnes: 22940,
+  expected_gap_tonnes: 5568,
   shortfall_flag: true,
-  risk_score: 0.78,
+  risk_score: 0.88,
   risk_level: 'HIGH',
   shap_values: {
-    'Equipment Haulage Downtime': 0.24,
-    'Development Stope Delay': 0.19,
-    'Drilling Pattern Deficit': 0.13,
-    'Cycle Time Road Slowdown': 0.09,
-    'Rainfall & Humidity Factor': 0.05
+    '3-Day Rolling Production Average': 0.24,
+    'Equipment Downtime Hours': 0.19,
+    'Development Stope Delay': 0.13,
+    'Mine Ore Grade Mn (%)': 0.09,
+    'Rainfall & Soil Moisture Factor': 0.05
   },
   is_prototype: true
 };
@@ -241,9 +241,9 @@ export const FIXTURE_RECOMMENDATIONS: Recommendation[] = [
     recommendation_id: 'REC-2026-001',
     action: 'Evaluate activation of alternate production block A-12',
     action_type: 'BLOCK_ACTIVATE',
-    reason: 'Current 7-day shortfall risk is 78% with a 3,800 t deficit at BLG-01. Block A-12 is 94% operationally ready with cleared haulage routes and active equipment.',
-    expected_benefit: 'Estimated mitigation of 2,000 to 3,500 t in production deficit.',
-    confidence: 0.78,
+    reason: 'Current 7-day shortfall risk is 88% with a 5,568 t deficit at Balaghat. Block A-12 is 94% operationally ready with cleared haulage routes and active equipment.',
+    expected_benefit: 'Estimated mitigation of 3,000 to 4,500 t in production deficit.',
+    confidence: 0.88,
     status: 'PENDING_REVIEW',
     is_prototype: true,
     created_at: '2026-09-07T00:00:00Z'
@@ -275,14 +275,16 @@ export const FIXTURE_RECOMMENDATIONS: Recommendation[] = [
 ];
 
 export const FIXTURE_DATA_SOURCES: DataSource[] = [
-  { id: 's1', source_id: 'sentinel2_l2a', dataset_name: 'Sentinel-2 Level-2A Harmonized Surface Reflectance', provider: 'ESA Copernicus / GEE', data_type: 'RASTER', coverage: 'Balaghat AOI', resolution: '10m / 20m / 60m', status: 'PENDING_VALIDATION', license: 'Open Access', availability: 0, notes: 'Primary optical bands B2-B12 and indices (NDVI, NDMI, NDRE).' },
-  { id: 's2', source_id: 'sentinel1_grd', dataset_name: 'Sentinel-1 C-band SAR GRD (VV/VH)', provider: 'ESA Copernicus / GEE', data_type: 'RASTER', coverage: 'Balaghat AOI', resolution: '~10m', status: 'PENDING_VALIDATION', license: 'Open Access', availability: 0, notes: 'All-weather radar backscatter for surface roughness and texture.' },
-  { id: 's3', source_id: 'srtm_dem', dataset_name: 'SRTM NASA Digital Elevation Model 1-arcsec', provider: 'NASA / USGS', data_type: 'RASTER', coverage: 'Balaghat AOI', resolution: '30m', status: 'PENDING_VALIDATION', license: 'Open Access', availability: 0, notes: 'Topographic slopes, curvature, flow accumulation, TPI.' },
-  { id: 's4', source_id: 'geology_gsi', dataset_name: 'GSI 1:50,000 Geological Quadrangle Quad Series', provider: 'Geological Survey of India', data_type: 'VECTOR', coverage: 'Balaghat Belt', resolution: '1:50,000', status: 'OPTIONAL', license: 'Government / Restricted', availability: 0, notes: 'Lithology, Sausar Group formations, structural contacts.' },
-  { id: 's5', source_id: 'mn_occurrences_public', dataset_name: 'Authoritative Known Manganese Occurrences', provider: 'GSI / Published Literature', data_type: 'VECTOR', coverage: 'Central India', resolution: 'Point Locations', status: 'PENDING_VALIDATION', license: 'Public / Academic', availability: 100, notes: 'Ground truth positives for supervised SpatialBlockCV prospectivity.' },
-  { id: 's6', source_id: 'roads_osm', dataset_name: 'OpenStreetMap Road & Track Network', provider: 'OSM Contributors', data_type: 'VECTOR', coverage: 'Balaghat District', resolution: 'Vector geometry', status: 'AVAILABLE', license: 'ODbL', availability: 100, notes: 'Logistical distance calculation for drill target accessibility.' },
-  { id: 's7', source_id: 'moil_production', dataset_name: 'MOIL Production & Shift Logs', provider: 'MOIL Limited', data_type: 'TABULAR', coverage: '5 Mine Leases', resolution: 'Shift / Daily', status: 'SYNTHETIC', license: 'Proprietary', availability: 0, notes: 'Prototype Simulation Data. Reflects realistic operational dynamics.' },
-  { id: 's8', source_id: 'moil_equipment', dataset_name: 'MOIL Heavy Machinery Fleet Telemetry', provider: 'MOIL Limited', data_type: 'TABULAR', coverage: 'Fleet Units', resolution: 'Telemetry records', status: 'SYNTHETIC', license: 'Proprietary', availability: 0, notes: 'Prototype Simulation Data. Tracks mechanical availability.' }
+  { id: 's1', source_id: 'sentinel2_l2a', dataset_name: 'Sentinel-2 Level-2A Harmonized Surface Reflectance', provider: 'ESA Copernicus Hub', data_type: 'RASTER', coverage: 'Balaghat AOI', resolution: '10m / 20m', status: 'AVAILABLE', license: 'Real Data (Loaded)', availability: 100, notes: 'Primary optical bands B2-B12 and indices (NDVI, NDBI, NDWI, Clay, Ferrous).' },
+  { id: 's2', source_id: 'sentinel1_grd', dataset_name: 'Sentinel-1 C-band SAR GRD (VV/VH)', provider: 'ESA Copernicus Hub', data_type: 'RASTER', coverage: 'Balaghat AOI', resolution: '~10m', status: 'AVAILABLE', license: 'Real Data (Loaded)', availability: 100, notes: 'All-weather radar backscatter for surface roughness and VV/VH ratio.' },
+  { id: 's3', source_id: 'srtm_dem', dataset_name: 'SRTM NASA Digital Elevation Model 1-arcsec', provider: 'NASA / USGS', data_type: 'RASTER', coverage: 'Balaghat AOI', resolution: '30m', status: 'AVAILABLE', license: 'Real Data (Loaded)', availability: 100, notes: 'Topographic elevation, slope, and aspect morphometry.' },
+  { id: 's4', source_id: 'geology_gsi', dataset_name: 'GSI 1:50,000 Geological Quadrangle (Schema_DM_LSM.gdb)', provider: 'Geological Survey of India', data_type: 'VECTOR', coverage: 'Balaghat Belt', resolution: '1:50,000', status: 'AVAILABLE', license: 'Real Data (Loaded)', availability: 100, notes: 'Lithology_LSM polygons and Mineralization_Line_LSM features.' },
+  { id: 's5', source_id: 'mn_occurrences_public', dataset_name: 'Authoritative Known Manganese Occurrences & Geochemistry', provider: 'GSI / Geochemistry Survey', data_type: 'VECTOR', coverage: 'Balaghat District', resolution: '160 Point Samples', status: 'AVAILABLE', license: 'Real Data (Loaded)', availability: 100, notes: '160 geochemical sample locations with Lat, Lon, MnO%, Fe2O3%, SiO2%.' },
+  { id: 's6', source_id: 'roads_osm', dataset_name: 'Balaghat Road & Track Network (GeoJSON)', provider: 'OpenStreetMap / OSM', data_type: 'VECTOR', coverage: 'Balaghat District', resolution: '2,057 Road Lines', status: 'AVAILABLE', license: 'Real Data (Loaded)', availability: 100, notes: 'Logistical distance calculation for drill target accessibility.' },
+  { id: 's7', source_id: 'weather_chirps', dataset_name: 'CHIRPS Annual Rainfall & SMAP Soil Moisture', provider: 'CHIRPS / SMAP NASA', data_type: 'RASTER', coverage: 'Balaghat AOI', resolution: 'Regional', status: 'AVAILABLE', license: 'Real Data (Loaded)', availability: 100, notes: 'Annual precipitation and soil moisture rasters.' },
+  { id: 's8', source_id: 'moil_production', dataset_name: 'MOIL Production & Shift Logs (production_history.csv)', provider: 'MOIL Operations', data_type: 'TABULAR', coverage: '10 Mine Leases', resolution: '66,300 Records', status: 'SYNTHETIC', license: 'Synthetic ML Data', availability: 100, notes: 'Synthetic operational data for shortfall risk classifier.' },
+  { id: 's9', source_id: 'moil_equipment', dataset_name: 'MOIL Machinery Telemetry (equipment_history.csv)', provider: 'Sensor Equipment', data_type: 'TABULAR', coverage: 'Fleet Units', resolution: '108,225 Records', status: 'SYNTHETIC', license: 'Synthetic ML Data', availability: 100, notes: 'Equipment operating hours, downtime, and fuel consumption.' },
+  { id: 's10', source_id: 'mine_blocks', dataset_name: 'Mine Block Spatial Model (mine_blocks.csv / GeoJSON)', provider: 'MOIL Planning', data_type: 'VECTOR', coverage: '68 Mine Blocks', resolution: 'Block Polygons', status: 'SYNTHETIC', license: 'Synthetic ML Data', availability: 100, notes: 'Mine block readiness, grade, and stripping ratios.' }
 ];
 
 export const FIXTURE_OCCURRENCES: MnOccurrence[] = [
