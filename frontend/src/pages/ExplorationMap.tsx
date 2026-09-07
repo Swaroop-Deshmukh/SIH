@@ -234,19 +234,20 @@ export const ExplorationMap: React.FC = () => {
 
         {/* Right Main Map Canvas */}
         <div className="lg:col-span-3 h-[600px] relative">
-          <Map />
-          <div className="absolute bottom-4 right-4 bg-white/95 shadow-md px-3 py-2 rounded border border-slate-300 text-xs text-slate-800 pointer-events-none space-y-1">
-            <div className="font-bold text-[#0B192C] text-[11px] uppercase tracking-wider">Active Layers Overlay</div>
+          <Map activeLayers={layers} />
+          <div className="absolute bottom-4 right-4 bg-white/95 shadow-md px-3 py-2 rounded border border-slate-300 text-xs text-slate-800 pointer-events-none space-y-1 z-10">
+            <div className="font-bold text-[#0B192C] text-[11px] uppercase tracking-wider">Active Canvas Overlays</div>
             <div className="flex items-center gap-2 text-[11px]">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 inline-block" />
-              <span>Sentinel-2 L2A Surface Reflectance</span>
+              <span>XGBoost Prospectivity Heatmap (0.91 Max)</span>
             </div>
             <div className="flex items-center gap-2 text-[11px]">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#1E3A8A] inline-block" />
-              <span>GSI Sausar Group Precambrian Faults</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-red-600 inline-block" />
+              <span>GSI Structural Fault Lineaments</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );

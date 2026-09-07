@@ -29,7 +29,7 @@ export interface MineBlock {
   ventilation_status?: string;
   water_risk?: 'LOW' | 'MEDIUM' | 'HIGH';
   readiness_score: number;
-  block_status: 'EXPLORATION' | 'DEVELOPMENT' | 'READY' | 'PRODUCING' | 'BLOCKED' | 'DEPLETED';
+  block_status: 'EXPLORATION' | 'DEVELOPMENT' | 'READY' | 'PRODUCING' | 'BLOCKED' | 'DEPLETED' | 'ACTIVATED';
   data_source: string;
 }
 
