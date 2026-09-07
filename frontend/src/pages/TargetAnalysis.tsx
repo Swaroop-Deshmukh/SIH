@@ -10,9 +10,14 @@ export const TargetAnalysis: React.FC = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-6">
-      <PrototypeBadge type="banner" />
+      <PrototypeBadge 
+        type="banner" 
+        isReal={true} 
+        message="REAL GEOSPATIAL ML MODEL INTEGRATED — Balaghat AOI (Random Forest Prospectivity Model trained on DEM, Sentinel-1, Sentinel-2, Geochemistry & GSI Geology)" 
+      />
 
       {/* Back to Targets Link */}
+
       <Link to="/drill-planning" className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E3A8A] hover:underline">
         <ArrowLeft className="w-4 h-4" />
         <span>Return to Drill Target Queue</span>

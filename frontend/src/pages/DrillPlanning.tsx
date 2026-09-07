@@ -7,7 +7,11 @@ import { Link } from 'react-router-dom';
 export const DrillPlanning: React.FC = () => {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-6">
-      <PrototypeBadge type="banner" />
+      <PrototypeBadge 
+        type="banner" 
+        isReal={true} 
+        message="REAL GEOSPATIAL TARGET RANKING — Balaghat Candidates extracted from High-Prospectivity & Low-Uncertainty Polygons" 
+      />
 
       {/* Page Title Banner */}
       <div className="bg-white border-l-4 border-[#D4AF37] border border-slate-200 p-6 rounded shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">

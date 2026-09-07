@@ -27,9 +27,14 @@ export const ExplorationMap: React.FC = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-6">
-      <PrototypeBadge type="banner" />
+      <PrototypeBadge 
+        type="banner" 
+        isReal={true} 
+        message="REAL GEOSPATIAL DATASETS INTEGRATED — Balaghat AOI (SRTM 30m DEM, Sentinel-1 SAR, Sentinel-2 Optical, GSI Geology, Geochemistry & GSI Ground Deposits)" 
+      />
 
       {/* Page Title Header */}
+
       <div className="bg-white border-l-4 border-[#D4AF37] border border-slate-200 p-6 rounded shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-[#1E3A8A] uppercase tracking-wider">

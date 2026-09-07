@@ -119,9 +119,13 @@ export const Header: React.FC = () => {
             <span className="text-[10px] text-slate-500 font-medium">Balaghat Belt Operations</span>
           </div>
 
-          <PrototypeBadge type="badge" />
+          <PrototypeBadge 
+            type="badge" 
+            isReal={['/', '/exploration', '/drill-planning', '/data-models'].some(p => location.pathname === p || location.pathname.startsWith('/exploration/'))} 
+          />
 
           {/* Drawer Menu Button (Screenshot 1 Far Right) */}
+
           <button 
             onClick={() => setDrawerOpen(true)}
             className="p-2 bg-slate-100 hover:bg-[#003366] hover:text-white text-[#003366] rounded border border-slate-300 transition-colors"
