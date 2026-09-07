@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import { Header } from './components/Header';
 import { Breadcrumb } from './components/Breadcrumb';
 import { Footer } from './components/Footer';
@@ -21,41 +23,124 @@ import { Security } from './pages/Security';
 
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen w-full bg-[#F8FAFC] text-slate-900 flex flex-col font-sans relative">
-        {/* Full-Width Government Sticky Top Header & Navigation */}
-        <Header />
+    <AuthProvider>
+      <BrowserRouter>
+        <div className="min-h-screen w-full bg-[#F8FAFC] text-slate-900 flex flex-col font-sans relative">
+          {/* Full-Width Government Sticky Top Header & Navigation */}
+          <Header />
 
-        {/* Dynamic Breadcrumbs */}
-        <Breadcrumb />
+          {/* Dynamic Breadcrumbs */}
+          <Breadcrumb />
 
-        {/* Main Content Body */}
-        <main className="flex-1 w-full">
-          <Routes>
-            <Route path="/" element={<CommandCenter />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/exploration" element={<ExplorationMap />} />
-            <Route path="/drill-planning" element={<DrillPlanning />} />
-            <Route path="/exploration/:targetId" element={<TargetAnalysis />} />
-            <Route path="/mine-twin" element={<MineTwin />} />
-            <Route path="/production" element={<Production />} />
-            <Route path="/equipment" element={<Equipment />} />
-            <Route path="/decisions" element={<DecisionCenter />} />
-            <Route path="/weather" element={<Weather />} />
-            <Route path="/security" element={<Security />} />
-            <Route path="/field-survey" element={<FieldSurvey />} />
-            <Route path="/data-models" element={<DataModels />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+          {/* Main Content Body */}
+          <main className="flex-1 w-full">
+            <Routes>
+              {/* Public Unauthenticated Entry Landing Page */}
+              <Route path="/" element={<CommandCenter />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/contact" element={<Contact />} />
 
-        {/* Floating MnAssist AI Chatbot Widget */}
-        <MnAssist />
+              {/* Exploration GIS (Public Read-Only Preview or Authenticated Role Access) */}
+              <Route
+                path="/exploration"
+                element={
+                  <ProtectedRoute path="/exploration">
+                    <ExplorationMap />
+                  </ProtectedRoute>
+                }
+              />
 
-        {/* Large Government PSU Footer */}
-        <Footer />
-      </div>
-    </BrowserRouter>
+              {/* Role-Protected Modules */}
+              <Route
+                path="/drill-planning"
+                element={
+                  <ProtectedRoute path="/drill-planning">
+                    <DrillPlanning />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/exploration/:targetId"
+                element={
+                  <ProtectedRoute path="/exploration">
+                    <TargetAnalysis />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/mine-twin"
+                element={
+                  <ProtectedRoute path="/mine-twin">
+                    <MineTwin />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/production"
+                element={
+                  <ProtectedRoute path="/production">
+                    <Production />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/equipment"
+                element={
+                  <ProtectedRoute path="/equipment">
+                    <Equipment />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/decisions"
+                element={
+                  <ProtectedRoute path="/decisions">
+                    <DecisionCenter />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/weather"
+                element={
+                  <ProtectedRoute path="/weather">
+                    <Weather />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/security"
+                element={
+                  <ProtectedRoute path="/security">
+                    <Security />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/field-survey"
+                element={
+                  <ProtectedRoute path="/field-survey">
+                    <FieldSurvey />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/data-models"
+                element={
+                  <ProtectedRoute path="/data-models">
+                    <DataModels />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </main>
+
+          {/* Floating MnAssist AI Chatbot Widget */}
+          <MnAssist />
+
+          {/* Large Government PSU Footer */}
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 };
-

@@ -168,14 +168,20 @@ export const Production: React.FC = () => {
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-extrabold text-red-700 uppercase tracking-wide">Option A: Current Operations</span>
+                    <span className="font-extrabold text-red-700 uppercase tracking-wide text-[11px]">Option A: Status Quo (Current)</span>
                     {simulatedOption === 'current' && <CheckCircle2 className="w-4 h-4 text-red-600" />}
                   </div>
-                  <div className="text-2xl font-bold text-slate-900 font-mono">-550 t/day</div>
-                  <div className="text-slate-600 mt-2 space-y-1">
-                    <p>• Shortfall Risk: <strong>84% 🔴</strong></p>
-                    <p>• Weekly Revenue Penalty: <strong>-₹42 Lakhs</strong></p>
-                    <p>• Operational Strain: High</p>
+                  <div className="text-2xl font-bold text-slate-900 font-mono">-550 t/day Deficit</div>
+                  <div className="mt-2 text-red-800 font-bold text-[11px] bg-red-100 px-2 py-0.5 rounded inline-block">
+                    84% Shortfall Risk Probability 🔴
+                  </div>
+                  
+                  <div className="mt-3 space-y-1.5 text-[11px] text-slate-700 border-t border-slate-200 pt-2 font-sans">
+                    <p className="font-bold text-red-900">Why Risk is High:</p>
+                    <p>• <strong>Pit #2 Haul Road Waterlogging</strong>: Monsoon runoff slows CAT 777G dumpers (-35% cycle speed).</p>
+                    <p>• <strong>EX-104 Dumper Breakdown</strong>: Isolation Forest hydraulic alarm (-420 t/day output).</p>
+                    <p>• <strong>Stope 4B Stoppage</strong>: Ventilation blast delay holds back face extraction.</p>
+                    <p>• <strong>Penalty</strong>: Accumulates <strong>-₹42 Lakhs/week</strong> revenue penalty.</p>
                   </div>
                 </div>
 
@@ -187,14 +193,20 @@ export const Production: React.FC = () => {
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-extrabold text-emerald-800 uppercase tracking-wide">Option B: Activate Block B-17</span>
+                    <span className="font-extrabold text-emerald-800 uppercase tracking-wide text-[11px]">Option B: Activate Block B-17 (Recommended)</span>
                     {simulatedOption === 'b17' && <CheckCircle2 className="w-4 h-4 text-emerald-600" />}
                   </div>
-                  <div className="text-2xl font-bold text-emerald-700 font-mono">+620 t/day</div>
-                  <div className="text-slate-600 mt-2 space-y-1">
-                    <p>• Shortfall Risk: <strong>0% 🟢 (Mitigated)</strong></p>
-                    <p>• Ore Grade Uplift: <strong>+1.5% Mn</strong></p>
-                    <p>• Net Setup Cost: <strong>₹18.5 Lakhs</strong></p>
+                  <div className="text-2xl font-bold text-emerald-700 font-mono">+620 t/day Yield</div>
+                  <div className="mt-2 text-emerald-900 font-bold text-[11px] bg-emerald-100 px-2 py-0.5 rounded inline-block">
+                    100% Deficit Coverage (+70 t Surplus) 🟢
+                  </div>
+
+                  <div className="mt-3 space-y-1.5 text-[11px] text-slate-700 border-t border-slate-200 pt-2 font-sans">
+                    <p className="font-bold text-emerald-900">Why Option B is Best:</p>
+                    <p>• <strong>Tonnage Offset</strong>: Injects <strong>+620 t/day</strong>, completely covering 550 t deficit.</p>
+                    <p>• <strong>Grade Uplift</strong>: Premium <strong>32.7% Mn (+1.5% higher grade)</strong> ore quality.</p>
+                    <p>• <strong>Zero Flood Risk</strong>: Level 6 underground reserve is 100% dry (Water Risk: LOW).</p>
+                    <p>• <strong>Low Setup Cost</strong>: Pre-drilled & ready (80% development); setup cost is only <strong>₹18.5 Lakhs</strong> (48h ramp-up).</p>
                   </div>
                 </div>
               </div>
