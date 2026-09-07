@@ -1,183 +1,99 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Database, CheckCircle2, XCircle, AlertTriangle, Layers, Info, ShieldCheck } from 'lucide-react';
 import { PrototypeBadge } from '../components/PrototypeBadge';
-import { FIXTURE_DATA_SOURCES } from '../services/fixtures';
-import { Database, CheckCircle, AlertTriangle, Clock, ShieldCheck, FileCheck, Layers, GitBranch } from 'lucide-react';
 
 export const DataModels: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'sources' | 'registry' | 'quality'>('sources');
-
-  const sources = FIXTURE_DATA_SOURCES;
+  const dataSources = [
+    { name: 'Balaghat AOI Boundary', provider: 'GSI / State Boundary', type: 'Vector (GeoJSON)', status: 'AVAILABLE', label: 'REAL DATA', crs: 'EPSG:4326' },
+    { name: 'Sentinel-2 L2A Optical SR', provider: 'ESA Copernicus Hub', type: 'Multi-spectral Raster', status: 'UNAVAILABLE', label: 'REAL DATA', crs: 'EPSG:32644' },
+    { name: 'Sentinel-1 SAR GRD', provider: 'ESA Copernicus Hub', type: 'C-band SAR Raster', status: 'UNAVAILABLE', label: 'REAL DATA', crs: 'EPSG:32644' },
+    { name: 'SRTM 30m NASA DEM', provider: 'NASA / USGS', type: 'Elevation Raster', status: 'UNAVAILABLE', label: 'REAL DATA', crs: 'EPSG:4326' },
+    { name: 'GSI Geology Lithology', provider: 'GSI / NGDR', type: 'Vector Shapefile', status: 'UNAVAILABLE', label: 'REAL DATA', crs: 'EPSG:4326' },
+    { name: 'GSI Lineaments & Faults', provider: 'GSI / NGDR', type: 'Vector Shapefile', status: 'UNAVAILABLE', label: 'REAL DATA', crs: 'EPSG:4326' },
+    { name: 'Known Mn Occurrences', provider: 'GSI / MOIL Catalog', type: 'Point Vector', status: 'UNAVAILABLE', label: 'REAL DATA', crs: 'EPSG:4326' },
+    { name: 'Mine Block Spatial Model', provider: 'MOIL Planning', type: 'Spatial Polygons', status: 'SYNTHETIC', label: 'PROTOTYPE SIMULATION DATA', crs: 'EPSG:32644' },
+    { name: 'Production History Logs', provider: 'MOIL Operations', type: 'Time-Series Tabular', status: 'SYNTHETIC', label: 'PROTOTYPE SIMULATION DATA', crs: 'N/A' },
+    { name: 'Machinery IoT Telemetry', provider: 'Sensor Equipment', type: 'Time-Series Tabular', status: 'SYNTHETIC', label: 'PROTOTYPE SIMULATION DATA', crs: 'N/A' },
+  ];
 
   return (
-    <div className="flex-1 overflow-y-auto p-6 space-y-6">
+    <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-6">
       <PrototypeBadge type="banner" />
 
-      {/* Header bar */}
-      <div className="bg-brand-surface border border-brand-border rounded-xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      {/* Page Title Header */}
+      <div className="bg-white border-l-4 border-[#D4AF37] border border-slate-200 p-6 rounded shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-base font-bold text-white flex items-center gap-2 mb-1">
-            <Database className="w-5 h-5 text-brand-accent" />
-            Data Quality Engine & ML Model Governance Registry
-          </h2>
-          <p className="text-xs text-slate-400 max-w-3xl">
-            Tracks dataset integrity, native resolution metadata, and licensing status. Models gracefully adapt to missing optional data without fabricating unverified coverage.
+          <div className="flex items-center gap-2 text-xs font-bold text-[#1E3A8A] uppercase tracking-wider">
+            <Database className="w-4 h-4 text-amber-500" />
+            <span>MOIL DATA GOVERNANCE & MODEL REGISTRY</span>
+          </div>
+          <h1 className="text-2xl font-bold text-[#0B192C] font-serif mt-1">
+            Geospatial Dataset Availability & ML Model Registry
+          </h1>
+          <p className="text-xs text-slate-600 mt-1">
+            Dynamic data source registry tracking dataset readiness, feature availability, and ML model versioning.
           </p>
         </div>
-
-        <div className="flex items-center gap-1 bg-brand-dark p-1 rounded-lg border border-brand-border">
-          {[
-            { id: 'sources', label: 'Data Sources (16)' },
-            { id: 'registry', label: 'ML Model Versions' },
-            { id: 'quality', label: 'Data Quality Audits' }
-          ].map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
-              className={`px-3 py-1 rounded text-xs font-semibold transition-colors ${
-                activeTab === tab.id ? 'bg-brand-accent text-brand-dark' : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="bg-[#0B192C] text-white p-3 rounded text-xs font-mono border-l-2 border-amber-400">
+          <p className="text-amber-400 font-bold">Data Completeness Score</p>
+          <p className="text-xl font-extrabold text-white">11% (Base AOI)</p>
         </div>
       </div>
 
-      {activeTab === 'sources' && (
-        <div className="bg-brand-surface border border-brand-border rounded-xl overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs text-slate-300">
-              <thead className="bg-brand-dark text-slate-400 font-semibold uppercase tracking-wider text-[10px] border-b border-brand-border">
-                <tr>
-                  <th className="p-3.5">Source Identifier</th>
-                  <th className="p-3.5">Dataset Title</th>
-                  <th className="p-3.5">Provider / Authority</th>
-                  <th className="p-3.5">Spatial Type</th>
-                  <th className="p-3.5">Native Resolution</th>
-                  <th className="p-3.5">Registry Status</th>
-                  <th className="p-3.5">Notes</th>
+      {/* Dataset Matrix Table */}
+      <div className="bg-white rounded border border-slate-200 p-6 shadow-sm space-y-4">
+        <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3 flex items-center justify-between">
+          <span>Dataset Availability Matrix</span>
+          <span className="text-xs font-bold text-[#1E3A8A]">10 Registered Sources</span>
+        </h3>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr className="bg-slate-100 border-b border-slate-200 text-[#0B192C] font-bold uppercase tracking-wider">
+                <th className="py-3 px-4">Dataset Name</th>
+                <th className="py-3 px-4">Provider</th>
+                <th className="py-3 px-4">Data Type</th>
+                <th className="py-3 px-4">CRS</th>
+                <th className="py-3 px-4">Category Label</th>
+                <th className="py-3 px-4">Status</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 text-slate-700">
+              {dataSources.map((ds, idx) => (
+                <tr key={idx} className="hover:bg-slate-50">
+                  <td className="py-3 px-4 font-bold text-[#0B192C]">{ds.name}</td>
+                  <td className="py-3 px-4 text-slate-600">{ds.provider}</td>
+                  <td className="py-3 px-4 font-mono text-[11px]">{ds.type}</td>
+                  <td className="py-3 px-4 font-mono text-[11px] text-slate-600">{ds.crs}</td>
+                  <td className="py-3 px-4">
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                      ds.label === 'REAL DATA' ? 'bg-blue-100 text-[#1E3A8A]' : 'bg-amber-100 text-amber-900 border border-amber-300'
+                    }`}>
+                      {ds.label}
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 font-bold">
+                    {ds.status === 'AVAILABLE' ? (
+                      <span className="text-emerald-700 flex items-center gap-1">
+                        <CheckCircle2 className="w-3.5 h-3.5" /> AVAILABLE
+                      </span>
+                    ) : ds.status === 'SYNTHETIC' ? (
+                      <span className="text-amber-800 flex items-center gap-1">
+                        <AlertTriangle className="w-3.5 h-3.5" /> SYNTHETIC
+                      </span>
+                    ) : (
+                      <span className="text-slate-500 flex items-center gap-1 font-mono">
+                        <XCircle className="w-3.5 h-3.5 text-slate-400" /> UNAVAILABLE
+                      </span>
+                    )}
+                  </td>
                 </tr>
-              </thead>
-              <tbody className="divide-y divide-brand-border/60">
-                {sources.map((s) => (
-                  <tr key={s.id} className="hover:bg-brand-card/40 transition-colors">
-                    <td className="p-3.5 font-mono text-[11px] text-brand-accent">{s.source_id}</td>
-                    <td className="p-3.5 font-bold text-white">{s.dataset_name}</td>
-                    <td className="p-3.5 text-slate-400">{s.provider}</td>
-                    <td className="p-3.5">
-                      <span className="px-1.5 py-0.5 rounded bg-brand-dark text-[10px] font-mono text-slate-300">
-                        {s.data_type}
-                      </span>
-                    </td>
-                    <td className="p-3.5 text-slate-400 font-mono">{s.resolution}</td>
-                    <td className="p-3.5">
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold border uppercase ${
-                        s.status === 'AVAILABLE'
-                          ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30'
-                          : s.status === 'SYNTHETIC'
-                          ? 'text-amber-400 bg-amber-500/10 border-amber-500/30'
-                          : s.status === 'OPTIONAL'
-                          ? 'text-slate-400 bg-slate-500/10 border-slate-500/30'
-                          : 'text-blue-400 bg-blue-500/10 border-blue-500/30'
-                      }`}>
-                        {s.status}
-                      </span>
-                    </td>
-                    <td className="p-3.5 text-[11px] text-slate-400 max-w-xs truncate">{s.notes}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </div>
-      )}
-
-      {activeTab === 'registry' && (
-        <div className="space-y-4">
-          {[
-            {
-              name: 'MnProspectivity-XGBoost',
-              version: 'v0.1-prototype',
-              module: 'MnExplore AI',
-              metrics: 'ROC-AUC: 0.84 | PR-AUC: 0.79 | Precision@25: 68%',
-              validation: 'SpatialBlockCV (5km Disjoint Folds)',
-              status: 'DEVELOPMENT',
-              notes: 'Trained on synthetic prototype labels. Real Sentinel-2 & DEM spatial cubes will be connected in Phase 5-14.'
-            },
-            {
-              name: 'ProductionForecast-RandomForest',
-              version: 'v0.1-prototype',
-              module: 'ShortfallShield AI',
-              metrics: 'MAE: 240 t | RMSE: 310 t | R²: 0.88',
-              validation: 'Time-Series Rolling Window (30-day train / 7-day test)',
-              status: 'DEVELOPMENT',
-              notes: 'Simulation operational data baseline. Evaluates haulage cycle times and equipment downtime factors.'
-            },
-            {
-              name: 'FleetAnomaly-IsolationForest',
-              version: 'v0.1-prototype',
-              module: 'Equipment Telemetry',
-              metrics: 'Contamination: 0.05 | Anomaly Recall: 91%',
-              validation: 'Unsupervised Unlabelled Scoring',
-              status: 'DEVELOPMENT',
-              notes: 'Monitors mechanical telemetry signatures for early failure indication.'
-            }
-          ].map((m, idx) => (
-            <div key={idx} className="p-5 bg-brand-surface border border-brand-border rounded-xl">
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <GitBranch className="w-4 h-4 text-brand-accent" />
-                  <span className="font-bold text-sm text-white">{m.name}</span>
-                  <span className="text-xs bg-brand-dark px-2 py-0.5 rounded text-brand-accent font-mono">
-                    {m.version}
-                  </span>
-                </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
-                  {m.status}
-                </span>
-              </div>
-              <p className="text-xs text-slate-400 mb-2">Module: <strong className="text-slate-200">{m.module}</strong></p>
-              <div className="p-2.5 bg-brand-dark rounded-lg text-xs font-mono text-emerald-400 mb-2 border border-brand-border/60">
-                {m.metrics}
-              </div>
-              <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-400">
-                <span>Validation Strategy: <strong className="text-slate-300">{m.validation}</strong></span>
-                <span className="italic">{m.notes}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {activeTab === 'quality' && (
-        <div className="bg-brand-surface border border-brand-border rounded-xl p-6 space-y-4 text-xs">
-          <h3 className="text-sm font-bold text-white">Continuous Spatial Data Completeness Metric</h3>
-          <p className="text-slate-400 leading-relaxed">
-            Every candidate drill target computes a composite Data Completeness Score representing the ratio of verified, high-resolution evidence layers present within the polygon footprint.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div className="p-4 bg-brand-card/40 rounded-xl border border-brand-border space-y-2">
-              <div className="flex justify-between font-bold">
-                <span className="text-slate-200">High Completeness Zone (&gt;70%)</span>
-                <span className="text-emerald-400">High Confidence</span>
-              </div>
-              <p className="text-[11px] text-slate-400 leading-relaxed">
-                Co-registered Sentinel-2 optical bands, Sentinel-1 SAR, 30m SRTM DEM, and mapped GSI structural contacts available.
-              </p>
-            </div>
-            <div className="p-4 bg-brand-card/40 rounded-xl border border-brand-border space-y-2">
-              <div className="flex justify-between font-bold">
-                <span className="text-slate-200">Sparse Completeness Zone (&lt;40%)</span>
-                <span className="text-amber-400">Target Investigation Required</span>
-              </div>
-              <p className="text-[11px] text-slate-400 leading-relaxed">
-                Optical/DEM proxies present but geochemical soil assays and airborne geophysics absent. Model elevates uncertainty estimate.
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 };

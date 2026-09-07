@@ -1,145 +1,167 @@
 import React, { useState } from 'react';
+import { MapPin, Camera, CheckCircle2, Upload, ShieldCheck, Layers } from 'lucide-react';
 import { PrototypeBadge } from '../components/PrototypeBadge';
-import { MapPin, Upload, CheckCircle2 } from 'lucide-react';
 
 export const FieldSurvey: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    targetId: 'MN-042',
-    lat: '21.8900',
-    lng: '80.2350',
-    lithology: 'Quartzite / Mica Schist',
-    rockType: 'Metasedimentary',
-    sampleId: 'SMP-2026-042-A',
-    notes: 'Outcrop shows secondary manganese oxide encrustations along joint planes.'
+  const [surveyData, setSurveyData] = useState({
+    targetId: 'TGT-001',
+    collectorName: 'Eng. Ramesh Verma',
+    sampleType: 'Manganese Ore Outcrop',
+    mnGradeEstimate: '38.5',
+    notes: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const recentSurveys = [
+    { id: '1', sample_code: 'MN-SAMP-001', mn_assay_percent: 38.5, location_name: 'North Balaghat Outcrop Strike A', collector: 'Eng. Ramesh Verma', date_collected: '2026-09-05' },
+    { id: '2', sample_code: 'MN-SAMP-002', mn_assay_percent: 34.2, location_name: 'East Bharweli Quartz-Mn Zone', collector: 'Geol. Priya Sharma', date_collected: '2026-09-02' },
+    { id: '3', sample_code: 'MN-SAMP-003', mn_assay_percent: 31.0, location_name: 'Ukwa Extension Shear Contact', collector: 'Geol. Amit Patel', date_collected: '2026-08-28' },
+  ];
+
+  const handleSurveySubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
   };
 
   return (
-    <div className="flex-1 overflow-y-auto p-6 space-y-6">
+    <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-6">
       <PrototypeBadge type="banner" />
 
-      <div className="max-w-2xl mx-auto bg-brand-surface border border-brand-border rounded-xl p-6">
-        <div className="flex items-center gap-3 pb-4 mb-6 border-b border-brand-border">
-          <div className="p-2.5 rounded-lg bg-brand-accent/20 text-brand-accent">
-            <MapPin className="w-5 h-5" />
+      {/* Page Title Header */}
+      <div className="bg-white border-l-4 border-[#D4AF37] border border-slate-200 p-6 rounded shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2 text-xs font-bold text-[#1E3A8A] uppercase tracking-wider">
+            <MapPin className="w-4 h-4 text-amber-500" />
+            <span>MOIL FIELD GEOLOGY PROGRESSIVE WEB APP (PWA)</span>
           </div>
-          <div>
-            <h2 className="text-base font-bold text-white">
-              Field Validation & Ground Survey PWA
-            </h2>
-            <p className="text-xs text-slate-400">
-              Direct field feedback loop: field assays automatically integrate into prospective ML model retraining cycles.
-            </p>
-          </div>
+          <h1 className="text-2xl font-bold text-[#0B192C] font-serif mt-1">
+            Ground-Truth Field Inspection & Outcrop Logging
+          </h1>
+          <p className="text-xs text-slate-600 mt-1">
+            Offline PWA logging ground-truth manganese outcrop samples for AI prospectivity model re-training.
+          </p>
+        </div>
+        <div className="bg-[#0B192C] text-white p-3 rounded text-xs font-mono border-l-2 border-amber-400">
+          <p className="text-amber-400 font-bold">Field App Status</p>
+          <p className="text-emerald-400 font-bold">Online & Geo-Synced</p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left Form: Field Entry */}
+        <div className="lg:col-span-2 bg-white rounded border border-slate-200 p-6 shadow-sm space-y-4">
+          <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3">
+            Record New Ground-Truth Geological Sample
+          </h3>
+
+          {submitted ? (
+            <div className="bg-emerald-50 border border-emerald-300 p-6 rounded text-center space-y-3">
+              <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
+              <h4 className="text-lg font-bold text-emerald-900">Sample Logged & Synced</h4>
+              <p className="text-xs text-emerald-800">
+                Sample reference <span className="font-mono font-bold">MOIL-SURVEY-2026-092</span> synchronized with PostGIS spatial database.
+              </p>
+              <button 
+                onClick={() => setSubmitted(false)}
+                className="px-4 py-1.5 bg-[#1E3A8A] text-white text-xs font-bold rounded hover:bg-[#0B192C]"
+              >
+                Log Additional Sample
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSurveySubmit} className="space-y-4 text-xs">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block font-bold text-slate-700 mb-1">Target ID / Site *</label>
+                  <select
+                    value={surveyData.targetId}
+                    onChange={(e) => setSurveyData({ ...surveyData, targetId: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded text-slate-900 font-mono"
+                  >
+                    <option>TGT-001 (North Balaghat)</option>
+                    <option>TGT-002 (East Bharweli)</option>
+                    <option>TGT-003 (Ukwa Extension)</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block font-bold text-slate-700 mb-1">Geologist / Field Engineer *</label>
+                  <input
+                    type="text"
+                    required
+                    value={surveyData.collectorName}
+                    onChange={(e) => setSurveyData({ ...surveyData, collectorName: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded text-slate-900"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block font-bold text-slate-700 mb-1">Sample Mineralogy *</label>
+                  <input
+                    type="text"
+                    required
+                    value={surveyData.sampleType}
+                    onChange={(e) => setSurveyData({ ...surveyData, sampleType: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded text-slate-900"
+                  />
+                </div>
+                <div>
+                  <label className="block font-bold text-slate-700 mb-1">Est. Mn Grade (%) *</label>
+                  <input
+                    type="number"
+                    step="0.1"
+                    required
+                    value={surveyData.mnGradeEstimate}
+                    onChange={(e) => setSurveyData({ ...surveyData, mnGradeEstimate: e.target.value })}
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded text-slate-900 font-mono"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block font-bold text-slate-700 mb-1">Outcrop Field Notes & Observations</label>
+                <textarea
+                  rows={3}
+                  placeholder="Enter structural strike/dip, host rock quartzite association..."
+                  value={surveyData.notes}
+                  onChange={(e) => setSurveyData({ ...surveyData, notes: e.target.value })}
+                  className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded text-slate-900"
+                />
+              </div>
+
+              <div className="pt-2 flex justify-end">
+                <button
+                  type="submit"
+                  className="px-6 py-2 bg-[#1E3A8A] text-white font-bold text-xs rounded hover:bg-[#0B192C] transition-colors shadow-sm flex items-center gap-2"
+                >
+                  <Upload className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Sync Sample Record</span>
+                </button>
+              </div>
+            </form>
+          )}
         </div>
 
-        {submitted ? (
-          <div className="p-6 text-center space-y-3 bg-emerald-500/10 border border-emerald-500/30 rounded-xl">
-            <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto animate-bounce" />
-            <h3 className="text-sm font-bold text-white">Observation Successfully Recorded</h3>
-            <p className="text-xs text-slate-300">
-              Sample ID <strong className="text-emerald-400">{formData.sampleId}</strong> queued for lab assay entry and subsequent model iteration.
-            </p>
+        {/* Right Log List */}
+        <div className="bg-white rounded border border-slate-200 p-6 shadow-sm space-y-3 text-xs">
+          <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3">
+            Recent Ground Inspections
+          </h3>
+
+          <div className="space-y-3">
+            {recentSurveys.map((survey) => (
+              <div key={survey.id} className="p-3 bg-slate-50 border border-slate-200 rounded space-y-1">
+                <div className="flex items-center justify-between font-bold">
+                  <span className="text-[#1E3A8A]">{survey.sample_code}</span>
+                  <span className="text-emerald-700 font-mono">{survey.mn_assay_percent}% Mn</span>
+                </div>
+                <p className="text-slate-700 text-[11px]">{survey.location_name}</p>
+                <p className="text-slate-500 text-[10px] font-mono">{survey.date_collected} | {survey.collector}</p>
+              </div>
+            ))}
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4 text-xs">
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-slate-400 mb-1 font-semibold">Associated Drill Target</label>
-                <select 
-                  value={formData.targetId} 
-                  onChange={(e) => setFormData({ ...formData, targetId: e.target.value })}
-                  className="w-full bg-brand-dark border border-brand-border rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-accent"
-                >
-                  <option value="MN-042">MN-042 (Score: 0.910)</option>
-                  <option value="MN-018">MN-018 (Score: 0.872)</option>
-                  <option value="MN-074">MN-074 (Score: 0.823)</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-slate-400 mb-1 font-semibold">Sample ID</label>
-                <input 
-                  type="text" 
-                  value={formData.sampleId}
-                  onChange={(e) => setFormData({ ...formData, sampleId: e.target.value })}
-                  className="w-full bg-brand-dark border border-brand-border rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-accent"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-slate-400 mb-1 font-semibold">Latitude (°N)</label>
-                <input 
-                  type="text" 
-                  value={formData.lat}
-                  onChange={(e) => setFormData({ ...formData, lat: e.target.value })}
-                  className="w-full bg-brand-dark border border-brand-border rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-accent"
-                />
-              </div>
-              <div>
-                <label className="block text-slate-400 mb-1 font-semibold">Longitude (°E)</label>
-                <input 
-                  type="text" 
-                  value={formData.lng}
-                  onChange={(e) => setFormData({ ...formData, lng: e.target.value })}
-                  className="w-full bg-brand-dark border border-brand-border rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-accent"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-slate-400 mb-1 font-semibold">Observed Lithology</label>
-                <input 
-                  type="text" 
-                  value={formData.lithology}
-                  onChange={(e) => setFormData({ ...formData, lithology: e.target.value })}
-                  className="w-full bg-brand-dark border border-brand-border rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-accent"
-                />
-              </div>
-              <div>
-                <label className="block text-slate-400 mb-1 font-semibold">Rock Classification</label>
-                <input 
-                  type="text" 
-                  value={formData.rockType}
-                  onChange={(e) => setFormData({ ...formData, rockType: e.target.value })}
-                  className="w-full bg-brand-dark border border-brand-border rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-accent"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-slate-400 mb-1 font-semibold">Geological Field Notes</label>
-              <textarea 
-                rows={3}
-                value={formData.notes}
-                onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="w-full bg-brand-dark border border-brand-border rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-accent"
-              />
-            </div>
-
-            <div className="p-4 border-2 border-dashed border-brand-border rounded-lg text-center text-slate-400 hover:border-brand-accent/50 cursor-pointer">
-              <Upload className="w-5 h-5 mx-auto mb-1 text-slate-500" />
-              <p className="text-xs">Attach Outcrop Photos or GPS Tracks</p>
-              <p className="text-[10px] text-slate-500 mt-0.5">JPEG, PNG, GPX up to 25MB</p>
-            </div>
-
-            <button 
-              type="submit"
-              className="w-full py-2.5 bg-brand-accent hover:bg-amber-500 text-brand-dark font-bold rounded-lg text-xs tracking-wider uppercase transition-colors"
-            >
-              Submit Ground Truth Record
-            </button>
-          </form>
-        )}
+        </div>
       </div>
     </div>
   );

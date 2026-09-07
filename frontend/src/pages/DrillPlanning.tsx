@@ -1,117 +1,88 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Target, MapPin, CheckCircle2, ChevronRight, Award, ShieldAlert } from 'lucide-react';
 import { PrototypeBadge } from '../components/PrototypeBadge';
 import { FIXTURE_TARGETS } from '../services/fixtures';
-import { Target, ArrowRight, ShieldCheck, Activity, Sliders, DollarSign, Compass, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const DrillPlanning: React.FC = () => {
-  const [priorityFilter, setPriorityFilter] = useState<string>('ALL');
-  const [sortBy, setSortBy] = useState<'rank' | 'prospectivity' | 'cost' | 'area'>('rank');
-
-  let targets = [...FIXTURE_TARGETS];
-
-  if (priorityFilter !== 'ALL') {
-    targets = targets.filter(t => t.priority_level === priorityFilter);
-  }
-
-  if (sortBy === 'prospectivity') {
-    targets.sort((a, b) => b.mean_prospectivity - a.mean_prospectivity);
-  } else if (sortBy === 'cost') {
-    targets.sort((a, b) => (a.estimated_survey_cost_inr || 0) - (b.estimated_survey_cost_inr || 0));
-  } else if (sortBy === 'area') {
-    targets.sort((a, b) => b.area_sqkm - a.area_sqkm);
-  } else {
-    targets.sort((a, b) => a.priority_rank - b.priority_rank);
-  }
-
   return (
-    <div className="flex-1 overflow-y-auto p-6 space-y-6">
+    <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-6">
       <PrototypeBadge type="banner" />
 
-      {/* Header card with ranking explanation */}
-      <div className="bg-brand-surface border border-brand-border rounded-xl p-6">
-        <h2 className="text-base font-bold text-white flex items-center gap-2 mb-2">
-          <Target className="w-5 h-5 text-brand-accent" />
-          DrillTarget AI — Exploration Prioritization Engine
-        </h2>
-        <p className="text-xs text-slate-400 max-w-4xl leading-relaxed">
-          Aggregates continuous prospectivity pixels into coherent candidate polygons. 
-          Ranks targets using a multi-criteria decision model: <span className="text-slate-200 font-semibold">Prospectivity + Structural Proximity + Geological Support + Accessibility - Uncertainty & Survey Cost</span>.
-        </p>
-
-        {/* Filter and Sorting Controls */}
-        <div className="mt-6 pt-4 border-t border-brand-border/60 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-400 font-semibold">Filter Priority:</span>
-            {['ALL', 'VERY_HIGH', 'HIGH', 'MEDIUM'].map(p => (
-              <button
-                key={p}
-                onClick={() => setPriorityFilter(p)}
-                className={`px-2.5 py-1 rounded text-[11px] font-bold tracking-wider uppercase transition-colors ${
-                  priorityFilter === p
-                    ? 'bg-brand-accent/20 text-brand-accent border border-brand-accent/40'
-                    : 'bg-brand-dark text-slate-400 hover:text-white'
-                }`}
-              >
-                {p}
-              </button>
-            ))}
+      {/* Page Title Banner */}
+      <div className="bg-white border-l-4 border-[#D4AF37] border border-slate-200 p-6 rounded shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2 text-xs font-bold text-[#1E3A8A] uppercase tracking-wider">
+            <Target className="w-4 h-4 text-amber-500" />
+            <span>DIAMOND CORE DRILLING SITE SELECTION</span>
           </div>
-
-          <div className="flex items-center gap-2 text-xs">
-            <span className="text-slate-400 font-semibold">Sort By:</span>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
-              className="bg-brand-dark border border-brand-border rounded-lg px-2.5 py-1 text-xs text-white focus:outline-none focus:border-brand-accent cursor-pointer"
-            >
-              <option value="rank">Recommended Priority Rank</option>
-              <option value="prospectivity">Highest Prospectivity Score</option>
-              <option value="cost">Lowest Estimated Survey Cost</option>
-              <option value="area">Polygon Footprint Area</option>
-            </select>
-          </div>
+          <h1 className="text-2xl font-bold text-[#0B192C] font-serif mt-1">
+            Drill Target AI & Priority Execution Queue
+          </h1>
+          <p className="text-xs text-slate-600 mt-1">
+            Multi-criteria ranked targets extracted from high-prospectivity & low-uncertainty watershed polygons.
+          </p>
+        </div>
+        <div className="bg-[#0B192C] text-white p-3 rounded text-xs font-mono border-l-2 border-amber-400">
+          <p className="text-amber-400 font-bold">Optimization Policy</p>
+          <p className="text-slate-300">Max Geological Support / Min Cost</p>
         </div>
       </div>
 
-      {/* Drill Target Cards */}
-      <div className="space-y-4">
-        {targets.map((t) => (
-          <div key={t.id} className="p-5 bg-brand-surface border border-brand-border rounded-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 hover:border-brand-accent/50 transition-all">
-            <div className="space-y-2 flex-1">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="text-lg font-black text-white tracking-wider">{t.target_id}</span>
-                <span className="text-[10px] bg-brand-accent/20 text-brand-accent px-2 py-0.5 rounded font-bold border border-brand-accent/30 uppercase tracking-wider">
-                  Rank #{t.priority_rank} ({t.priority_level})
-                </span>
-                <span className="text-xs text-slate-400">Footprint: <strong className="text-slate-200">{t.area_sqkm} km²</strong></span>
-                <span className="text-xs text-slate-400 flex items-center gap-1">
-                  Est. Survey Cost: <strong className="text-brand-accent">₹{((t.estimated_survey_cost_inr || 0) / 100000).toFixed(1)} Lakhs</strong>
-                </span>
-              </div>
+      {/* Targets Data Table */}
+      <div className="bg-white rounded border border-slate-200 p-6 shadow-sm space-y-4">
+        <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3">
+          Ranked Candidate Target List (Balaghat Manganese Belt)
+        </h3>
 
-              <p className="text-xs text-slate-300">
-                <strong className="text-brand-accent">Next Operational Step:</strong> {t.recommended_action}
-              </p>
-
-              <div className="flex flex-wrap items-center gap-4 text-[11px] text-slate-400 pt-1">
-                <span>Prospectivity: <strong className="text-white font-bold">{(t.mean_prospectivity * 100).toFixed(1)}%</strong></span>
-                <span>Uncertainty: <strong className="text-slate-200">{(t.uncertainty * 100).toFixed(1)}%</strong></span>
-                <span>Geology Support: <strong className="text-emerald-400 font-semibold">{t.geological_support}</strong></span>
-                <span>Structural Lineaments: <strong className="text-emerald-400 font-semibold">{t.structural_support}</strong></span>
-                <span>Road Accessibility: <strong className="text-emerald-400 font-semibold">{t.accessibility}</strong></span>
-              </div>
-            </div>
-
-            <Link
-              to={`/exploration/${t.target_id}`}
-              className="px-4 py-2 bg-brand-accent/20 hover:bg-brand-accent/30 text-brand-accent border border-brand-accent/40 rounded-lg text-xs font-bold flex items-center gap-2 transition-colors flex-shrink-0"
-            >
-              <span>Target Analysis & SHAP</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        ))}
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr className="bg-slate-100 border-b border-slate-200 text-[#0B192C] font-bold uppercase tracking-wider">
+                <th className="py-3 px-4">Rank</th>
+                <th className="py-3 px-4">Target ID</th>
+                <th className="py-3 px-4">Geological Support</th>
+                <th className="py-3 px-4">Mean Prospectivity</th>
+                <th className="py-3 px-4">Uncertainty</th>
+                <th className="py-3 px-4">Area (sq km)</th>
+                <th className="py-3 px-4">Road Access</th>
+                <th className="py-3 px-4">Priority Level</th>
+                <th className="py-3 px-4">Action</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 text-slate-700">
+              {FIXTURE_TARGETS.map((target, idx) => (
+                <tr key={target.id} className="hover:bg-slate-50">
+                  <td className="py-3 px-4 font-bold text-[#1E3A8A]">#{target.priority_rank}</td>
+                  <td className="py-3 px-4 font-bold text-[#0B192C]">{target.target_id}</td>
+                  <td className="py-3 px-4 font-semibold text-slate-800">{target.geological_support}</td>
+                  <td className="py-3 px-4">
+                    <span className="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded text-[11px]">
+                      {(target.mean_prospectivity * 100).toFixed(1)}%
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 text-slate-600">
+                    {(target.uncertainty * 100).toFixed(1)}%
+                  </td>
+                  <td className="py-3 px-4">{target.area_sqkm} km²</td>
+                  <td className="py-3 px-4">
+                    <span className="text-emerald-700 font-semibold">{target.accessibility}</span>
+                  </td>
+                  <td className="py-3 px-4 font-bold text-amber-800">{target.priority_level}</td>
+                  <td className="py-3 px-4">
+                    <Link
+                      to={`/exploration/${target.target_id}`}
+                      className="px-3 py-1 bg-[#1E3A8A] text-white rounded text-[11px] font-semibold hover:bg-[#0B192C] transition-colors inline-flex items-center gap-1"
+                    >
+                      <span>SHAP Analysis</span>
+                      <ChevronRight className="w-3 h-3 text-amber-400" />
+                    </Link>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

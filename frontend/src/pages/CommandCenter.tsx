@@ -1,199 +1,302 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { 
+  ChevronLeft, 
+  ChevronRight, 
+  ChevronsRight, 
+  ShieldCheck, 
+  ArrowRight, 
+  Building2, 
+  Layers, 
+  MapPin, 
+  TrendingUp, 
+  Settings, 
+  Brain, 
+  Target, 
+  FileText, 
+  Info,
+  CheckCircle2
+} from 'lucide-react';
 import { KPICard } from '../components/KPICard';
-import { Map } from '../components/Map';
 import { PrototypeBadge } from '../components/PrototypeBadge';
-import { TrendingUp, AlertTriangle, Cpu, Target } from 'lucide-react';
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
-
-const mockForecast = [
-  { day: 'Day 1', target: 7140, forecast: 6800 },
-  { day: 'Day 2', target: 7140, forecast: 6720 },
-  { day: 'Day 3', target: 7140, forecast: 6650 },
-  { day: 'Day 4', target: 7140, forecast: 6580 },
-  { day: 'Day 5', target: 7140, forecast: 6500 },
-  { day: 'Day 6', target: 7140, forecast: 6480 },
-  { day: 'Day 7', target: 7140, forecast: 6470 },
-];
 
 export const CommandCenter: React.FC = () => {
-  return (
-    <div className="flex-1 overflow-y-auto p-6 space-y-6">
-      <PrototypeBadge type="banner" />
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-      {/* KPI Overview Row */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <KPICard
-          title="Production vs Target"
-          value="92.4"
-          unit="%"
-          subtitle="46,200 t of 50,000 t target"
-          trend="down"
-          trendValue="3,800 t deficit"
-          status="warning"
-          isPrototype
-          icon={<TrendingUp className="w-4 h-4 text-amber-400" />}
-        />
-        <KPICard
-          title="Shortfall Risk"
-          value="78"
-          unit="%"
-          subtitle="ShortfallShield: 7-Day Window"
-          status="danger"
-          isPrototype
-          icon={<AlertTriangle className="w-4 h-4 text-red-400" />}
-        />
-        <KPICard
-          title="Equipment Availability"
-          value="84.2"
-          unit="%"
-          subtitle="1 unit in breakdown anomaly"
-          trend="down"
-          trendValue="-3.1% vs avg"
-          status="warning"
-          isPrototype
-          icon={<Cpu className="w-4 h-4 text-amber-400" />}
-        />
-        <KPICard
-          title="Priority Drill Targets"
-          value="12"
-          unit="Candidates"
-          subtitle="Top: MN-042 (0.91 prospectivity)"
-          status="ok"
-          isPrototype
-          icon={<Target className="w-4 h-4 text-emerald-400" />}
-        />
-      </div>
-
-      {/* Main Map & Priority Targets Split */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[460px]">
-        {/* Map Column */}
-        <div className="lg:col-span-2 h-full flex flex-col">
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-semibold text-white tracking-wide">
-              Balaghat Regional Spatial Command Map
-            </h3>
-            <span className="text-xs text-slate-400">MapLibre GL JS Base</span>
+  const heroSlides = [
+    {
+      title: "MOIL MnVision 360 — Space-to-Mine Intelligence Platform",
+      subtitle: "Empowering India's Core Manganese Industry with Space-to-Mine Satellite & Geological Intelligence",
+      tagline: "A Miniratna Category-I PSU under Ministry of Steel, Govt. of India",
+      cta: "Explore GIS Prospectivity Map",
+      link: "/exploration",
+      // Custom SVG vector render matching MOIL Underground Miners (Screenshot 1)
+      renderGraphic: (
+        <div className="w-full h-full bg-gradient-to-r from-slate-950 via-[#002855] to-slate-950 flex flex-col justify-end p-8 md:p-12 relative overflow-hidden">
+          {/* Background Underground Mining Tunnel Grid */}
+          <div className="absolute inset-0 bg-[radial-gradient(#D4AF37_1.5px,transparent_1.5px)] [background-size:24px_24px] opacity-20" />
+          
+          {/* Underground Mining Tunnel Silhouette Renders */}
+          <div className="absolute right-6 bottom-4 opacity-30 flex items-end gap-3 pointer-events-none">
+            <div className="w-24 h-48 bg-amber-600/40 rounded-t-full border-t-2 border-amber-400" />
+            <div className="w-32 h-64 bg-blue-900/40 rounded-t-full border-t-2 border-blue-400" />
           </div>
-          <div className="flex-1 min-h-[380px]">
-            <Map />
+
+          <div className="relative z-10 max-w-2xl space-y-3 text-white">
+            <div className="inline-flex items-center gap-2 bg-amber-400 text-slate-950 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+              <ShieldCheck className="w-4 h-4 text-slate-950" />
+              <span>Adding Strength to Steel</span>
+            </div>
+            <h2 className="text-2xl md:text-4xl font-extrabold font-serif leading-tight text-white">
+              Underground & Opencast Manganese Exploration AI
+            </h2>
+            <p className="text-xs md:text-sm text-slate-200 leading-relaxed font-light">
+              Fusing Sentinel-2 multi-spectral indices, Sentinel-1 SAR backscatter, SRTM DEM morphometry, and GSI Sausar Group geology into explainable prospectivity models.
+            </p>
           </div>
         </div>
-
-        {/* High Priority Exploration Targets List */}
-        <div className="bg-brand-surface border border-brand-border rounded-xl p-4 flex flex-col justify-between">
-          <div>
-            <div className="flex items-center justify-between pb-3 border-b border-brand-border">
-              <h3 className="text-sm font-semibold text-white tracking-wide">
-                Candidate Exploration Targets
-              </h3>
-              <span className="text-[10px] bg-brand-accent/20 text-brand-accent px-1.5 py-0.5 rounded font-bold">
-                DrillTarget AI
-              </span>
+      )
+    },
+    {
+      title: "Precision Diamond Core Drill Target Selection",
+      subtitle: "SpatialBlockCV XGBoost Prospectivity Mapping clipped to Balaghat Manganese Belt (EPSG:4326)",
+      tagline: "Balaghat Manganese Belt • Madhya Pradesh",
+      cta: "View Drill Targets Queue",
+      link: "/drill-planning",
+      renderGraphic: (
+        <div className="w-full h-full bg-gradient-to-r from-[#060D18] via-[#002855] to-[#060D18] flex flex-col justify-end p-8 md:p-12 relative overflow-hidden">
+          <div className="relative z-10 max-w-2xl space-y-3 text-white">
+            <div className="inline-flex items-center gap-2 bg-emerald-400 text-slate-950 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+              <Target className="w-4 h-4" />
+              <span>Watershed Target Extractor</span>
             </div>
+            <h2 className="text-2xl md:text-4xl font-extrabold font-serif leading-tight text-white">
+              AI Candidate Target Polygon Extraction
+            </h2>
+            <p className="text-xs md:text-sm text-slate-200 leading-relaxed font-light">
+              Multi-criteria ranking combining probability scores, structural lineaments, and accessibility metrics for exploratory diamond core drilling.
+            </p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "MineTwin 3D Block Model & ShortfallShield",
+      subtitle: "30-60-90 Day Production Output Forecasting & Machinery Telemetry Anomaly Detection",
+      tagline: "MOIL Balaghat, Ukwa & Bharweli Operations",
+      cta: "View Production Dashboard",
+      link: "/production",
+      renderGraphic: (
+        <div className="w-full h-full bg-gradient-to-r from-[#002855] via-[#0B192C] to-[#002855] flex flex-col justify-end p-8 md:p-12 relative overflow-hidden">
+          <div className="relative z-10 max-w-2xl space-y-3 text-white">
+            <div className="inline-flex items-center gap-2 bg-amber-400 text-slate-950 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+              <TrendingUp className="w-4 h-4" />
+              <span>ShortfallShield Early Warning</span>
+            </div>
+            <h2 className="text-2xl md:text-4xl font-extrabold font-serif leading-tight text-white">
+              Mine Operations & Machine Telemetry AI
+            </h2>
+            <p className="text-xs md:text-sm text-slate-200 leading-relaxed font-light">
+              Isolation Forest anomaly detection on heavy excavators, dump trucks, and crushers paired with Google OR-Tools multi-objective decision optimization.
+            </p>
+          </div>
+        </div>
+      )
+    }
+  ];
 
-            <div className="mt-3 space-y-3">
-              {[
-                { id: 'MN-042', prospectivity: '0.910', uncertainty: '0.18', priority: 'VERY HIGH', action: 'Ground Geological Survey' },
-                { id: 'MN-018', prospectivity: '0.872', uncertainty: '0.22', priority: 'HIGH', action: 'Geophysical Survey' },
-                { id: 'MN-074', prospectivity: '0.823', uncertainty: '0.31', priority: 'HIGH', action: 'Geochemical Sampling' },
-              ].map((t) => (
-                <div key={t.id} className="p-3 bg-brand-card/50 border border-brand-border/60 rounded-lg hover:border-brand-accent/40 transition-colors">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-bold text-xs text-white tracking-wider">{t.id}</span>
-                    <span className="text-[10px] font-semibold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">
-                      {t.priority}
-                    </span>
-                  </div>
-                  <div className="flex justify-between text-[11px] text-slate-400 mb-1.5">
-                    <span>Score: <strong className="text-white">{t.prospectivity}</strong></span>
-                    <span>Uncertainty: <strong className="text-slate-300">{t.uncertainty}</strong></span>
-                  </div>
-                  <p className="text-[10px] text-slate-400 truncate">
-                    <span className="text-brand-accent">Next:</span> {t.action}
-                  </p>
-                </div>
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 7000);
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
+
+  return (
+    <div className="w-full space-y-6 pb-8">
+      {/* 1. HERO CAROUSEL BANNER (Screenshot 1 & 2 Rounded Image Slider) */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 pt-4">
+        <div className="relative rounded-[28px] border border-slate-300 shadow-xl overflow-hidden min-h-[340px] md:min-h-[380px] flex flex-col justify-between">
+          {/* Slide Graphic */}
+          <div className="absolute inset-0 w-full h-full">
+            {heroSlides[currentSlide].renderGraphic}
+          </div>
+
+          {/* Side Carousel Navigation Buttons (Matching Screenshot 1 Side Arrows) */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-slate-900 flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-20"
+            aria-label="Previous Slide"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-slate-900 flex items-center justify-center shadow-lg transition-transform hover:scale-110 z-20"
+            aria-label="Next Slide"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Bottom Action Bar */}
+          <div className="relative z-20 p-6 md:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-auto">
+            <NavLink
+              to={heroSlides[currentSlide].link}
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-xs rounded-full shadow-lg transition-all transform hover:-translate-y-0.5"
+            >
+              <span>{heroSlides[currentSlide].cta}</span>
+              <ArrowRight className="w-4 h-4" />
+            </NavLink>
+
+            {/* Slide Dots */}
+            <div className="flex items-center gap-2 bg-slate-950/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              {heroSlides.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrentSlide(idx)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all ${
+                    idx === currentSlide ? 'bg-amber-400 w-7' : 'bg-white/50 hover:bg-white'
+                  }`}
+                />
               ))}
             </div>
           </div>
+        </div>
+      </div>
 
-          <div className="pt-3 border-t border-brand-border/60 text-[11px] text-slate-400 flex items-center justify-between">
-            <span>Model v0.1-prototype</span>
-            <button className="text-brand-accent hover:underline text-xs font-semibold">
-              Explore All 12 →
-            </button>
+      {/* 2. DEEP ROYAL BLUE SCROLLING TICKER BAR (Matching Screenshot 1 & 2 Ticker) */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="bg-[#203480] text-white py-2.5 px-6 rounded-full flex items-center gap-3 text-xs font-semibold shadow-md overflow-hidden border border-blue-900">
+          <div className="flex items-center gap-1.5 font-bold text-amber-300 flex-shrink-0 uppercase text-[11px]">
+            <ChevronsRight className="w-4 h-4 text-amber-300" />
+            <span>ANNOUNCEMENTS</span>
+          </div>
+          <div className="truncate text-[11px] text-slate-100 font-sans tracking-wide">
+            <span className="text-amber-300">&gt;&gt;</span> Availability of Manganese Ore is available on MOIL's Customer Portal and has also been communicated to customers
+            <span className="mx-4 text-blue-300">|</span>
+            <span className="text-amber-300">&gt;&gt;</span> Recruitment Advertisement for the post of Chief General Manager (Personnel) (E-08)
+            <span className="mx-4 text-blue-300">|</span>
+            <span className="text-amber-300">&gt;&gt;</span> MOIL MnVision 360 Space-to-Mine Platform deployed for Balaghat Manganese Belt (2026)
           </div>
         </div>
       </div>
 
-      {/* Production Forecast Chart & Active Risks */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 bg-brand-surface border border-brand-border rounded-xl p-4">
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <h3 className="text-sm font-semibold text-white tracking-wide">
-                7-Day Production Forecast vs Daily Target
-              </h3>
-              <p className="text-xs text-slate-400">RandomForest Regressor prototype model prediction</p>
-            </div>
-            <span className="text-xs text-red-400 bg-red-500/10 border border-red-500/20 px-2 py-0.5 rounded font-semibold">
-              Projected Deficit: 3,800 t
-            </span>
-          </div>
-
-          <div className="h-56">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={mockForecast} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#2A3B58" />
-                <XAxis dataKey="day" stroke="#94A3B8" fontSize={11} />
-                <YAxis stroke="#94A3B8" fontSize={11} domain={[6000, 7500]} />
-                <Tooltip
-                  contentStyle={{ backgroundColor: '#121B2C', borderColor: '#2A3B58', fontSize: '12px' }}
-                />
-                <Bar dataKey="target" name="Daily Target (t)" fill="#3B82F6" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="forecast" name="Forecast (t)" fill="#F59E0B" radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
+      {/* 3. EXECUTIVE KPI STATISTICS GRID */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-3 pt-2">
+        <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+          <h2 className="text-base font-bold text-[#003366] font-serif psu-section-title">
+            MOIL Balaghat Operational & Exploration Summary
+          </h2>
+          <PrototypeBadge type="badge" />
         </div>
 
-        {/* Active AI Risk Center Summary */}
-        <div className="bg-brand-surface border border-brand-border rounded-xl p-4 flex flex-col justify-between">
-          <div>
-            <h3 className="text-sm font-semibold text-white tracking-wide mb-3">
-              Active Operational Risks
-            </h3>
-            <div className="space-y-2.5">
-              <div className="p-2.5 rounded-lg border border-red-500/30 bg-red-500/10 text-xs">
-                <div className="flex items-center justify-between font-semibold text-red-400 mb-1">
-                  <span>🔴 Production Shortfall Risk</span>
-                  <span>78%</span>
-                </div>
-                <p className="text-slate-300 text-[11px]">Primary model signal: Haulage bottleneck (cycle +18%)</p>
-              </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <KPICard
+            title="Active MOIL Mines"
+            value={3}
+            unit="Mines"
+            subtitle="Balaghat, Ukwa, Bharweli"
+            icon={<Building2 className="w-5 h-5" />}
+            status="ok"
+          />
+          <KPICard
+            title="Total Ore Reserves"
+            value="12.4"
+            unit="Million Tonnes"
+            subtitle="Proven & Probable"
+            icon={<Layers className="w-5 h-5" />}
+            status="ok"
+          />
+          <KPICard
+            title="High Prospectivity Area"
+            value="142.8"
+            unit="sq km"
+            subtitle="Prob > 0.75 Target Zone"
+            icon={<MapPin className="w-5 h-5" />}
+            status="ok"
+          />
+          <KPICard
+            title="Daily Production Target"
+            value="1,420"
+            unit="TPD"
+            subtitle="Target: 1,500 TPD (94.6%)"
+            trend="up"
+            trendValue="+3.2%"
+            icon={<TrendingUp className="w-5 h-5" />}
+            status="ok"
+            isPrototype
+          />
+          <KPICard
+            title="Machinery Availability"
+            value="94.2%"
+            unit="Operational"
+            subtitle="Heavy Equipment Fleet"
+            trend="up"
+            trendValue="+1.8%"
+            icon={<Settings className="w-5 h-5" />}
+            status="ok"
+            isPrototype
+          />
+        </div>
+      </div>
 
-              <div className="p-2.5 rounded-lg border border-amber-500/30 bg-amber-500/10 text-xs">
-                <div className="flex items-center justify-between font-semibold text-amber-400 mb-1">
-                  <span>🟠 Equipment Anomaly</span>
-                  <span>EX-104</span>
-                </div>
-                <p className="text-slate-300 text-[11px]">CAT 777G elevated idle/downtime pattern detected</p>
-              </div>
+      {/* 4. FEATURED PLATFORM MODULES GRID */}
+      <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-4 pt-2">
+        <h2 className="text-base font-bold text-[#003366] font-serif psu-section-title">
+          MnVision 360 Featured Modules
+        </h2>
 
-              <div className="p-2.5 rounded-lg border border-slate-600 bg-slate-800/40 text-xs">
-                <div className="flex items-center justify-between font-semibold text-slate-300 mb-1">
-                  <span>🟡 Weather Impact</span>
-                  <span>Low Risk</span>
-                </div>
-                <p className="text-slate-400 text-[11px]">Balaghat dry spell; minimal precipitation delay</p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Module 1: Exploration GIS */}
+          <NavLink to="/exploration" className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:border-[#003366] hover:shadow-md transition-all group space-y-3">
+            <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#003366] flex items-center justify-center group-hover:bg-[#003366] group-hover:text-white transition-colors">
+              <MapPin className="w-5 h-5" />
             </div>
-          </div>
+            <h3 className="text-base font-bold text-[#003366] group-hover:text-[#003366] flex items-center justify-between">
+              <span>Exploration GIS & Prospectivity</span>
+              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#003366]" />
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Interactive MapLibre canvas displaying XGBoost prospectivity rasters, spatial uncertainty, lithology, lineaments, and known occurrences.
+            </p>
+          </NavLink>
 
-          <div className="pt-3 border-t border-brand-border/60">
-            <button className="w-full py-2 bg-brand-card hover:bg-slate-700/60 text-slate-200 border border-brand-border rounded-lg text-xs font-semibold transition-colors">
-              Open Decision Engine Recommendations →
-            </button>
-          </div>
+          {/* Module 2: Drill Target AI */}
+          <NavLink to="/drill-planning" className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:border-[#003366] hover:shadow-md transition-all group space-y-3">
+            <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#003366] flex items-center justify-center group-hover:bg-[#003366] group-hover:text-white transition-colors">
+              <Target className="w-5 h-5" />
+            </div>
+            <h3 className="text-base font-bold text-[#003366] group-hover:text-[#003366] flex items-center justify-between">
+              <span>Drill Target AI Extractor</span>
+              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#003366]" />
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Watershed spatial polygon extraction ranking top exploratory drill targets by probability, accessibility, and structural support.
+            </p>
+          </NavLink>
+
+          {/* Module 3: MineTwin */}
+          <NavLink to="/mine-twin" className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:border-[#003366] hover:shadow-md transition-all group space-y-3">
+            <div className="w-10 h-10 rounded-lg bg-blue-50 text-[#003366] flex items-center justify-center group-hover:bg-[#003366] group-hover:text-white transition-colors">
+              <Building2 className="w-5 h-5" />
+            </div>
+            <h3 className="text-base font-bold text-[#003366] group-hover:text-[#003366] flex items-center justify-between">
+              <span>MineTwin 3D Block Model</span>
+              <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-[#003366]" />
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              3D/2D Mine block model viewer with dynamic Block Readiness Matrix considering permits, rock quality (RQD), and geotechnical risk.
+            </p>
+          </NavLink>
         </div>
       </div>
     </div>

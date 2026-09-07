@@ -1,195 +1,93 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { TrendingUp, AlertTriangle, CheckCircle2, ChevronRight, Activity, BarChart2 } from 'lucide-react';
 import { PrototypeBadge } from '../components/PrototypeBadge';
-import { 
-  FIXTURE_PRODUCTION_SUMMARY, 
-  FIXTURE_FORECAST, 
-  FIXTURE_PIPELINE_STAGES, 
-  FIXTURE_SHORTFALL 
-} from '../services/fixtures';
-import { TrendingUp, AlertOctagon, BarChart2, Layers, ShieldAlert, Sliders } from 'lucide-react';
-import { ResponsiveContainer, BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
+import { FIXTURE_PRODUCTION_SUMMARY, FIXTURE_FORECAST, FIXTURE_SHORTFALL } from '../services/fixtures';
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
 export const Production: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'forecast' | 'shortfall' | 'bottlenecks'>('forecast');
-  const [horizonDays, setHorizonDays] = useState<number>(7);
-
-  const shortfall = FIXTURE_SHORTFALL;
-  const summary = FIXTURE_PRODUCTION_SUMMARY;
-
   return (
-    <div className="flex-1 overflow-y-auto p-6 space-y-6">
-      <PrototypeBadge type="banner" />
+    <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-6 space-y-6">
+      <PrototypeBadge type="banner" message="PROTOTYPE SIMULATION DATA — ShortfallShield Ore Production Forecasting" />
 
-      {/* Production Module Sub-Navigation */}
-      <div className="bg-brand-surface border border-brand-border rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      {/* Page Title Header */}
+      <div className="bg-white border-l-4 border-[#D4AF37] border border-slate-200 p-6 rounded shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-base font-bold text-white tracking-wide flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-brand-accent" />
-            ShortfallShield AI — Production & Bottleneck Intelligence
-          </h2>
-          <p className="text-xs text-slate-400 mt-0.5">
-            Operational early warning integrating mine readiness, fleet telemetry anomalies, and haulage cycle efficiency.
+          <div className="flex items-center gap-2 text-xs font-bold text-[#1E3A8A] uppercase tracking-wider">
+            <TrendingUp className="w-4 h-4 text-amber-500" />
+            <span>MOIL PRODUCTION INTELLIGENCE & SHORTFALLSHIELD</span>
+          </div>
+          <h1 className="text-2xl font-bold text-[#0B192C] font-serif mt-1">
+            30-60-90 Day Ore Production Forecasting
+          </h1>
+          <p className="text-xs text-slate-600 mt-1">
+            XGBoost regressor time-series forecasting & early warning shortfall risk classifier.
           </p>
         </div>
-
-        <div className="flex items-center gap-1 bg-brand-dark p-1 rounded-lg border border-brand-border">
-          {[
-            { id: 'forecast', label: 'Production Forecast' },
-            { id: 'shortfall', label: 'Shortfall Early Warning' },
-            { id: 'bottlenecks', label: 'Bottleneck Engine' }
-          ].map(tab => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
-              className={`px-3 py-1 rounded text-xs font-semibold transition-colors ${
-                activeTab === tab.id ? 'bg-brand-accent text-brand-dark' : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+        <div className="bg-[#0B192C] text-white p-3 rounded text-xs font-mono border-l-2 border-amber-400">
+          <p className="text-amber-400 font-bold">Monthly Target Achievement</p>
+          <p className="text-xl font-extrabold text-white">{FIXTURE_PRODUCTION_SUMMARY.achievement_pct}%</p>
         </div>
       </div>
 
-      {activeTab === 'forecast' && (
-        <div className="space-y-6">
-          {/* Top KPI Metrics Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-            <div className="p-4 bg-brand-surface border border-brand-border rounded-xl">
-              <span className="text-[10px] uppercase font-bold text-slate-400">Total Monthly Target</span>
-              <p className="text-2xl font-black text-white mt-1">{summary.target_tonnes.toLocaleString()} t</p>
-              <p className="text-[11px] text-slate-400 mt-1">5 MOIL Operating Leases</p>
-            </div>
-            <div className="p-4 bg-brand-surface border border-brand-border rounded-xl">
-              <span className="text-[10px] uppercase font-bold text-slate-400">Model Predicted Output</span>
-              <p className="text-2xl font-black text-amber-400 mt-1">{summary.actual_tonnes.toLocaleString()} t</p>
-              <p className="text-[11px] text-red-400 mt-1">Projected gap: {summary.gap_tonnes.toLocaleString()} t</p>
-            </div>
-            <div className="p-4 bg-brand-surface border border-brand-border rounded-xl">
-              <span className="text-[10px] uppercase font-bold text-slate-400">Target Achievement</span>
-              <p className="text-2xl font-black text-white mt-1">{summary.achievement_pct}%</p>
-              <p className="text-[11px] text-amber-400 mt-1">Deficit threshold breached</p>
-            </div>
-            <div className="p-4 bg-brand-surface border border-brand-border rounded-xl">
-              <span className="text-[10px] uppercase font-bold text-slate-400">Shortfall Probability</span>
-              <p className="text-2xl font-black text-red-400 mt-1">{shortfall.risk_score * 100}%</p>
-              <p className="text-[11px] text-red-400 font-semibold mt-1">Status: HIGH RISK</p>
-            </div>
-          </div>
+      {/* Production Chart */}
+      <div className="bg-white rounded border border-slate-200 p-6 shadow-sm space-y-4">
+        <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3 flex items-center justify-between">
+          <span>7-Day Ore Output Forecast (Daily Tonnes)</span>
+          <span className="text-xs font-normal text-slate-500">XGBoost Regressor Model</span>
+        </h3>
 
-          {/* Forecast Chart */}
-          <div className="bg-brand-surface border border-brand-border rounded-xl p-6">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mb-6">
-              <div>
-                <h3 className="text-sm font-bold text-white flex items-center gap-2">
-                  <BarChart2 className="w-4 h-4 text-brand-accent" />
-                  7-Day Forward Daily Output Forecast vs Target Meterage
-                </h3>
-                <p className="text-xs text-slate-400">RandomForest / XGBoost Regressor ensemble predictions with confidence bounds</p>
-              </div>
-              <span className="text-xs bg-red-500/10 text-red-400 border border-red-500/30 px-2.5 py-1 rounded font-bold">
-                High Shortfall Probability
-              </span>
-            </div>
-
-            <div className="h-72">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={FIXTURE_FORECAST} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#2A3B58" />
-                  <XAxis dataKey="day" stroke="#94A3B8" fontSize={11} />
-                  <YAxis stroke="#94A3B8" fontSize={11} domain={[5500, 7500]} />
-                  <Tooltip contentStyle={{ backgroundColor: '#121B2C', borderColor: '#2A3B58', fontSize: '12px' }} />
-                  <Legend wrapperStyle={{ fontSize: '12px' }} />
-                  <Bar dataKey="target" name="Daily Target (t)" fill="#3B82F6" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="forecast" name="Forecast Prediction (t)" fill="#F59E0B" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
+        <div className="h-64 w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={FIXTURE_FORECAST}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
+              <XAxis dataKey="day" stroke="#64748B" fontSize={11} />
+              <YAxis stroke="#64748B" fontSize={11} />
+              <Tooltip contentStyle={{ backgroundColor: '#FFFFFF', borderColor: '#CBD5E1', fontSize: '12px' }} />
+              <Area type="monotone" dataKey="target" stroke="#64748B" fill="#F1F5F9" name="Target Tons" />
+              <Area type="monotone" dataKey="forecast" stroke="#1E3A8A" fill="#1E3A8A" fillOpacity={0.2} name="Forecast Tons" />
+            </AreaChart>
+          </ResponsiveContainer>
         </div>
-      )}
+      </div>
 
-      {activeTab === 'shortfall' && (
-        <div className="space-y-6">
-          {/* Prominent Risk Banner */}
-          <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-5 flex items-start gap-4">
-            <AlertOctagon className="w-7 h-7 text-red-400 flex-shrink-0 mt-0.5" />
-            <div>
-              <h3 className="text-sm font-bold text-red-400 mb-1">
-                Shortfall Alert: 7-Day Production Deficit Projected at North Balaghat (BLG-01)
-              </h3>
-              <p className="text-xs text-slate-300 leading-relaxed">
-                The ShortfallShield model evaluates a <strong className="text-white">78% likelihood</strong> of missing the upcoming weekly target by approximately <strong className="text-red-400">3,800 tonnes</strong>.
-              </p>
-            </div>
-          </div>
+      {/* Shortfall Alerts Table */}
+      <div className="bg-white rounded border border-slate-200 p-6 shadow-sm space-y-4">
+        <h3 className="text-base font-bold text-[#0B192C] font-serif border-b border-slate-200 pb-3 flex items-center justify-between">
+          <span>ShortfallShield Active Risk Warning</span>
+          <span className="text-xs font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">High Risk Alert</span>
+        </h3>
 
-          {/* Root-Cause SHAP Breakdown */}
-          <div className="bg-brand-surface border border-brand-border rounded-xl p-6">
-            <h3 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
-              <ShieldAlert className="w-4 h-4 text-brand-accent" />
-              Model-Attributed Root-Cause Signals (SHAP Contributions)
-            </h3>
-            <p className="text-xs text-slate-400 mb-6">
-              Model signals identified as primary contributors toward the projected deficit. (Denotes machine learning model attribution, not unconditional mechanical causality.)
-            </p>
-
-            <div className="space-y-3">
-              {Object.entries(shortfall.shap_values || {}).map(([cause, val]) => (
-                <div key={cause} className="p-3 bg-brand-card/40 border border-brand-border rounded-lg flex items-center justify-between">
-                  <span className="text-xs font-semibold text-slate-200">{cause}</span>
-                  <div className="flex items-center gap-3">
-                    <div className="w-32 bg-brand-dark rounded-full h-2 overflow-hidden">
-                      <div className="bg-red-500 h-full" style={{ width: `${val * 100 * 3}%` }} />
-                    </div>
-                    <span className="text-xs font-mono font-bold text-red-400">+{(val * 100).toFixed(0)}%</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {activeTab === 'bottlenecks' && (
-        <div className="space-y-6">
-          {/* Bottleneck Stage Grid */}
-          <div className="bg-brand-surface border border-brand-border rounded-xl p-6">
-            <h3 className="text-sm font-bold text-white mb-1 flex items-center gap-2">
-              <BarChart2 className="w-4 h-4 text-brand-accent" />
-              Mining Process Stage Utilization & Bottleneck Detection
-            </h3>
-            <p className="text-xs text-slate-400 mb-6">
-              Evaluation of effective daily throughput identifying the limiting operational constraint.
-            </p>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
-              {FIXTURE_PIPELINE_STAGES.map((s) => (
-                <div 
-                  key={s.stage} 
-                  className={`p-3 rounded-lg border text-center ${
-                    s.status === 'BOTTLENECK'
-                      ? 'bg-red-500/15 border-red-500/50 text-red-400'
-                      : s.status === 'DELAYED'
-                      ? 'bg-amber-500/10 border-amber-500/30 text-amber-400'
-                      : 'bg-brand-card/40 border-brand-border text-slate-300'
-                  }`}
-                >
-                  <p className="text-xs font-bold mb-1 truncate">{s.stage}</p>
-                  <p className="text-lg font-extrabold text-white">{s.actual_tpd.toLocaleString()}</p>
-                  <p className="text-[10px] text-slate-400">Cap: {s.capacity_tpd.toLocaleString()} t/d</p>
-                  <p className="text-[11px] font-semibold text-slate-300 mt-1">{s.utilization_pct}% util</p>
-                  <span className={`inline-block mt-2 text-[9px] font-bold tracking-wider uppercase px-1.5 py-0.5 rounded ${
-                    s.status === 'BOTTLENECK' ? 'bg-red-500/30 text-red-300' : 'bg-brand-dark text-slate-400'
-                  }`}>
-                    {s.status}
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr className="bg-slate-100 border-b border-slate-200 text-[#0B192C] font-bold uppercase tracking-wider">
+                <th className="py-3 px-4">Mine Site</th>
+                <th className="py-3 px-4">Prediction Date</th>
+                <th className="py-3 px-4">Forecast Period</th>
+                <th className="py-3 px-4">Target Tonnes</th>
+                <th className="py-3 px-4">Expected Deficit</th>
+                <th className="py-3 px-4">Risk Level</th>
+                <th className="py-3 px-4">Risk Score</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 text-slate-700">
+              <tr className="hover:bg-slate-50">
+                <td className="py-3 px-4 font-bold text-[#0B192C]">{FIXTURE_SHORTFALL.mine_name}</td>
+                <td className="py-3 px-4 font-mono">{FIXTURE_SHORTFALL.prediction_date}</td>
+                <td className="py-3 px-4">{FIXTURE_SHORTFALL.forecast_period_days} Days</td>
+                <td className="py-3 px-4 font-mono">{FIXTURE_SHORTFALL.target_tonnes.toLocaleString()} Tons</td>
+                <td className="py-3 px-4 font-bold text-red-700">-{FIXTURE_SHORTFALL.expected_gap_tonnes.toLocaleString()} Tons</td>
+                <td className="py-3 px-4">
+                  <span className="bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded text-[11px]">
+                    {FIXTURE_SHORTFALL.risk_level}
                   </span>
-                </div>
-              ))}
-            </div>
-          </div>
+                </td>
+                <td className="py-3 px-4 font-mono font-bold text-[#1E3A8A]">{(FIXTURE_SHORTFALL.risk_score * 100).toFixed(0)}%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      )}
+      </div>
     </div>
   );
 };

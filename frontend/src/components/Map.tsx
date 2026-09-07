@@ -19,7 +19,7 @@ export const Map: React.FC<MapProps> = ({
   useEffect(() => {
     if (map.current || !mapContainer.current) return;
 
-    // Use free public demo style or basic raster basemap
+    // Light basemap style
     map.current = new maplibregl.Map({
       container: mapContainer.current,
       style: 'https://demotiles.maplibre.org/style.json',
@@ -43,14 +43,14 @@ export const Map: React.FC<MapProps> = ({
 
       mines.forEach((mine) => {
         const el = document.createElement('div');
-        el.className = 'w-4 h-4 rounded-full bg-brand-accent border-2 border-white shadow-lg cursor-pointer animate-pulse';
+        el.className = 'w-4 h-4 rounded-full bg-[#1E3A8A] border-2 border-amber-400 shadow-md cursor-pointer animate-pulse';
         
         new maplibregl.Marker({ element: el })
           .setLngLat(mine.coords as [number, number])
           .setPopup(new maplibregl.Popup({ offset: 10 }).setHTML(`
             <div class="text-slate-900 p-1 text-xs">
               <strong>${mine.name}</strong><br/>
-              Status: <span class="text-emerald-600 font-semibold">${mine.status}</span>
+              Status: <span class="text-emerald-700 font-bold">${mine.status}</span>
             </div>
           `))
           .addTo(map.current!);
@@ -64,10 +64,10 @@ export const Map: React.FC<MapProps> = ({
   }, [initialCenter, initialZoom]);
 
   return (
-    <div className="relative w-full h-full rounded-xl overflow-hidden border border-brand-border" style={{ height }}>
+    <div className="relative w-full h-full rounded border border-slate-300 overflow-hidden shadow-sm" style={{ height }}>
       <div ref={mapContainer} className="w-full h-full" />
-      <div className="absolute top-3 left-3 bg-brand-dark/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-brand-border text-xs text-slate-200 pointer-events-none">
-        <span className="font-semibold text-brand-accent">AOI:</span> Balaghat Manganese Belt (21.83° N, 80.18° E)
+      <div className="absolute top-3 left-3 bg-white/95 shadow-md px-3 py-1.5 rounded border border-slate-300 text-xs text-slate-800 pointer-events-none font-semibold">
+        <span className="text-[#1E3A8A] font-bold">AOI Boundary:</span> Balaghat Manganese Belt (21.83° N, 80.18° E)
       </div>
     </div>
   );

@@ -10,7 +10,9 @@ import {
   Brain, 
   MapPin, 
   Database,
-  Layers
+  Layers,
+  Landmark,
+  ExternalLink
 } from 'lucide-react';
 
 export const Sidebar: React.FC = () => {
@@ -27,21 +29,36 @@ export const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="w-64 bg-brand-surface border-r border-brand-border flex flex-col justify-between flex-shrink-0 z-20">
+    <aside className="w-64 bg-[#0B192C] border-r-2 border-[#2B4C7E] flex flex-col justify-between flex-shrink-0 z-20 shadow-2xl">
       <div>
         {/* Brand Header */}
-        <div className="px-6 py-5 flex items-center gap-3 border-b border-brand-border">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-accent to-amber-200 flex items-center justify-center shadow-md">
-            <Layers className="w-5 h-5 text-brand-dark" />
+        <div className="px-5 py-4 border-b border-brand-border/60 bg-[#060D18]/60">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-700 flex items-center justify-center shadow-lg border border-amber-300/40">
+              <Layers className="w-6 h-6 text-slate-950" />
+            </div>
+            <div>
+              <div className="flex items-center gap-1">
+                <h1 className="font-extrabold text-base tracking-wide text-white">MnVision 360</h1>
+              </div>
+              <p className="text-[10px] text-amber-400 font-semibold tracking-wider uppercase">
+                MOIL Space-to-Mine
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="font-bold text-base tracking-wide text-white">MnVision 360</h1>
-            <p className="text-[10px] text-slate-400 font-medium tracking-wider uppercase">MOIL Space-to-Mine</p>
+          <div className="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400">
+            <span className="flex items-center gap-1 font-medium text-slate-300">
+              <Landmark className="w-3 h-3 text-amber-400" />
+              MOIL Limited PSU
+            </span>
+            <span className="bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded font-mono text-[9px]">
+              Nagpur
+            </span>
           </div>
         </div>
 
         {/* Navigation List */}
-        <nav className="p-3 space-y-1">
+        <nav className="p-2.5 space-y-1 mt-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -49,14 +66,14 @@ export const Sidebar: React.FC = () => {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-all duration-150 ${
+                  `flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-all duration-200 ${
                     isActive
-                      ? 'bg-brand-accent/15 text-brand-accent font-semibold border-l-2 border-brand-accent'
-                      : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/60'
+                      ? 'bg-[#162C46] text-amber-300 font-bold border-l-4 border-amber-400 shadow-md transform translate-x-1'
+                      : 'text-slate-300 hover:text-white hover:bg-[#162C46]/60 hover:border-l-2 hover:border-amber-400/60'
                   }`
                 }
               >
-                <Icon className="w-4 h-4 flex-shrink-0" />
+                <Icon className="w-4 h-4 flex-shrink-0 text-amber-400/90" />
                 <span className="truncate">{item.label}</span>
               </NavLink>
             );
@@ -64,16 +81,28 @@ export const Sidebar: React.FC = () => {
         </nav>
       </div>
 
-      {/* Footer Info */}
-      <div className="p-4 border-t border-brand-border/60 text-[11px] text-slate-500">
-        <div className="flex items-center justify-between mb-1">
-          <span>System Status</span>
-          <span className="flex items-center gap-1.5 text-emerald-400 font-medium">
+      {/* Official PSU Footer Info */}
+      <div className="p-4 border-t border-brand-border/60 bg-[#060D18]/80 text-[11px] text-slate-400 space-y-2">
+        <div className="flex items-center justify-between">
+          <span className="text-slate-400 text-[10px]">Ministry of Steel PSU</span>
+          <span className="flex items-center gap-1.5 text-emerald-400 font-semibold text-[10px]">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Online
+            Active
           </span>
         </div>
-        <p className="text-[10px] text-slate-500">v1.0.0-phase1 (Prototype)</p>
+
+        <div className="pt-2 border-t border-slate-800 text-[10px] text-slate-500 space-y-1">
+          <p className="font-semibold text-slate-400">MOIL Bhavan, Nagpur</p>
+          <a 
+            href="https://www.moil.nic.in/public/home" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-amber-400/80 hover:text-amber-300 transition-colors"
+          >
+            <span>moil.nic.in</span>
+            <ExternalLink className="w-2.5 h-2.5" />
+          </a>
+        </div>
       </div>
     </aside>
   );
